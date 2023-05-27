@@ -1,4 +1,6 @@
 ### Hi there 👋
+![MuaKissGIF](https://github.com/qorjiwon/qorjiwon/assets/82700743/90692f87-7991-495c-a5b7-257f50dd7139)
+
 
 <!--
 **qorjiwon/qorjiwon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
