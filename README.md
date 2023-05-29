@@ -1,7 +1,6 @@
 ### Hi there 👋
 ![MuaKissGIF](https://github.com/qorjiwon/qorjiwon/assets/82700743/90692f87-7991-495c-a5b7-257f50dd7139)
 
-**qorjiwon/qorjiwon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 <a href="https://www.instagram.com/qorjiwon/" target="_blank">
 <img src="https://img.shields.io/badge/Instagram-C0C0C0?style=social&logo=Instagram&logoColor=E4405F"/>
 </a>
@@ -11,7 +10,7 @@
 
 
 <!--
-
+**qorjiwon/qorjiwon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 Here are some ideas to get you started:
 
 - 🔭 I’m currently working on ...
