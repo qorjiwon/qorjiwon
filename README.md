@@ -1,6 +1,6 @@
 ## Hi🤗
 
-I'm Jiwon Baek🐈, Backend Developer grom Korea
+I'm Jiwon Baek🐈, Backend Developer from Korea
 
 MY TECH STACK 
 ---
