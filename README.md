@@ -1,7 +1,7 @@
 ## Hi🤗
 
 I'm Jiwon Baek🐈, Backend Developer from Korea
-
+👉https://velog.io/@qorjiwon
 MY TECH STACK 
 ---
 
