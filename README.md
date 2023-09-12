@@ -1,6 +1,6 @@
 ## Hi🤗
 
-I'm Jiwon Baek🐈, Backend Developer from Korea
+I'm Jiwon Baek🐈
 
 👉https://velog.io/@qorjiwon
 
