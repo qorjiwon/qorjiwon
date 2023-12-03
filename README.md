@@ -1,6 +1,6 @@
 ## Hi🤗
 
-I'm Jiwon Baek🐈
+I'm Jiwon Baek
 
 ## 🎖️Awards
 2023 경희대학교 해커톤(Khuthon) 최우수상<br>
