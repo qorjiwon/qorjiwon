@@ -13,4 +13,4 @@ Hi🤗 I hope you have a good day today.
 - 경희고등학교 JAVA 알고리즘 멘토링  <sub>2023.08 - 2023.12</sub>
 - 경희대학교 객체지향프로그래밍 수업도우미  <sub>2023.09 - 2023.12</sub>
 - 경희고등학교 C++ 알고리즘 멘토링  <sub>2024.03 - 2024.07</sub>
-- 오늘의웹툰 FE intern <sub>2024.03 ~ </sub>
+- 오늘의웹툰 FE intern <sub>2024.03 ~ 2024.06 </sub>
