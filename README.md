@@ -17,4 +17,4 @@ Hi🤗 I hope you have a good day today.
 - 자를란트 대학 독일 전공 연수 <sub>2024.07.07 ~ 2024.07.27 </sub>
 
 ### Now
-- **✈️Sydney, Australia😎🏖️ <sub>2024.09 ~ </sub>**
+- **✈️Sydney, Australia😎🏖️ <sub>2024.09 ~ 2025.02</sub>**
