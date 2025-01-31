@@ -2,20 +2,19 @@
 Hi🤗 I hope you have a good day today.
 
 ## 🏆Awards🏆
-2023 경희대학교 해커톤(Khuthon) 최우수상<br>
-2023 경희대학교 SW 페스티벌 인기상<br>
-2023 경희대학교 SW 페스티벌 대상<br>
-2024 경희대학교 KVS 10기 (창업교육프로그램) 1st
+- **2023** Kyung Hee University Hackathon (Khuthon) – **2nd Place**  
+- **2023** Kyung Hee University SW Festival – **1st Place & People’s Choice Award**  
+- **2024** Kyung Hee University KVS 10th (Startup Program) – **1st Place**
 
 ## ☁️Experience☁️
-- 경희대학교 소프트웨어융합대학 학생회  <sub>2021 - 2023</sub>  
-- 경희대학교 DA/AI 동아리 KHUDA 3기  <sub>2023.01 - 2023.07</sub> 
-  - CV 트랙 수강
-- 경희고등학교 JAVA 알고리즘 멘토링  <sub>2023.08 - 2023.12</sub>
-- 경희대학교 객체지향프로그래밍 수업도우미  <sub>2023.09 - 2023.12</sub>
-- 경희고등학교 C++ 알고리즘 멘토링  <sub>2024.03 - 2024.07</sub>
-- 오늘의웹툰 FE intern <sub>2024.03 ~ 2024.06 </sub>
-- 자를란트 대학 독일 전공 연수 <sub>2024.07.07 ~ 2024.07.27 </sub>
+- **Student Council, Kyung Hee University SW College** <sub>(2021 - 2023)</sub>  
+- **KHUDA 3rd (DA/AI Club, Kyung Hee University)** <sub>(Jan 2023 - Jul 2023)</sub>  
+  - CV Track  
+- **Java Algorithm Mentor, Kyung Hee High School** <sub>(Aug 2023 - Dec 2023)</sub>  
+- **OOP Teaching Assistant, Kyung Hee University** <sub>(Sep 2023 - Dec 2023)</sub>  
+- **C++ Algorithm Mentor, Kyung Hee High School** <sub>(Mar 2024 - Jul 2024)</sub>  
+- **Frontend Intern, 오늘의웹툰** <sub>(Mar 2024 - Jun 2024)</sub>  
+- **Exchange Program, Saarland University (Germany)** <sub>(Jul 7, 2024 - Jul 27, 2024)</sub>
 
 ### Now
 - **✈️Sydney, Australia😎🏖️ <sub>2024.09 ~ 2025.02</sub>**
