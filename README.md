@@ -1,5 +1,5 @@
 ## 백지원 *Jiwon Baek*
-Hi🤗 I hope you have a good day today.
+Hi🤗 Wishing you a wonderful day🥂
 
 ## 🏆Awards🏆
 - **2023** Kyung Hee University Hackathon (Khuthon) – **2nd Place**  
