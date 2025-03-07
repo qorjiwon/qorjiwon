@@ -15,6 +15,3 @@ Hi🤗 Wishing you a wonderful day🥂
 - **C++ Algorithm Mentor, Kyung Hee High School** <sub>(Mar 2024 - Jul 2024)</sub>  
 - **Frontend Intern, 오늘의웹툰** <sub>(Mar 2024 - Jun 2024)</sub>  
 - **Exchange Program, Saarland University (Germany)** <sub>(Jul 7, 2024 - Jul 27, 2024)</sub>
-
-### Now
-- **✈️Sydney, Australia😎🏖️ <sub>2024.09 ~ 2025.02</sub>**
