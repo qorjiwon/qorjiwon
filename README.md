@@ -13,5 +13,5 @@ Hi🤗 Wishing you a wonderful day🥂
 - **Java Algorithm Mentor, Kyung Hee High School** <sub>(Aug 2023 - Dec 2023)</sub>  
 - **OOP Teaching Assistant, Kyung Hee University** <sub>(Sep 2023 - Dec 2023)</sub>  
 - **C++ Algorithm Mentor, Kyung Hee High School** <sub>(Mar 2024 - Jul 2024)</sub>  
-- **Frontend Intern, 오늘의웹툰** <sub>(Mar 2024 - Jun 2024)</sub>  
+- **Frontend Intern, Webtoon Today (StartUp)** <sub>(Mar 2024 - Jun 2024)</sub>  
 - **Exchange Program, Saarland University (Germany)** <sub>(Jul 7, 2024 - Jul 27, 2024)</sub>
