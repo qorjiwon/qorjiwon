@@ -5,6 +5,7 @@ Hi🤗 Wishing you a wonderful day🥂
 - **2023** Kyung Hee University Hackathon (Khuthon) – **2nd Place**  
 - **2023** Kyung Hee University SW Festival – **1st Place & People’s Choice Award**  
 - **2024** Kyung Hee University KVS 10th (Startup Program) – **1st Place**
+- **2025** Kyung Hee University Hackathon (Khuthon) – **excellence prize**
 
 ## ☁️Experience☁️
 - **Student Council, Kyung Hee University SW College** <sub>(2021 - 2023)</sub>  
