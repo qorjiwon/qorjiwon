@@ -2,21 +2,14 @@
 Hi🤗 Wishing you a wonderful day🥂
 good luck! 👊🌟
 
+
 <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=qorjiwon&utm_content=line">
   <img
-    src="https://render.gitanimals.org/lines/qorjiwon?pet-id=714821421884626569"
+    src="https://render.gitanimals.org/lines/qorjiwon"
     width="600"
-    height="120"
+    height="200"
   />
-</a>
-<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=qorjiwon&utm_content=farm">
-<img
-  src="https://render.gitanimals.org/farms/qorjiwon"
-  width="600"
-  height="300"
-/>
-</a>
-  
+</a>  
 
 ## 🏆Awards🏆
 - **2023** Kyung Hee University Hackathon (Khuthon) – **2nd Place**  
