@@ -1,5 +1,15 @@
 ## 백지원 *Jiwon Baek*
 Hi🤗 Wishing you a wonderful day🥂
+good luck! 👊🌟
+
+<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=qorjiwon&utm_content=line">
+  <img
+    src="https://render.gitanimals.org/lines/qorjiwon?pet-id=714821421884626569"
+    width="600"
+    height="120"
+  />
+</a>
+  
 
 ## 🏆Awards🏆
 - **2023** Kyung Hee University Hackathon (Khuthon) – **2nd Place**  
