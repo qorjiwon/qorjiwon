@@ -1,7 +1,6 @@
-## 백지원 *Jiwon Baek*
+## 백지원 *Jiwon Baek* <img src="https://raw.githubusercontent.com/git-goods/gitanimals/main/docs/snowman-melt.svg" width="50px" height="28px" style="max-width: 100%;">
 Hi🤗 Wishing you a wonderful day🥂
 good luck! 👊🌟
-
 
 <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=qorjiwon&utm_content=line">
   <img
