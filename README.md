@@ -25,15 +25,11 @@ good luck! 👊🌟
 - **C++ Algorithm Mentor, Kyung Hee High School** <sub>(Mar 2024 - Jul 2024)</sub>  
 - **Frontend Intern, Webtoon Today (StartUp)** <sub>(Mar 2024 - Jun 2024)</sub>  
 - **Exchange Program, Saarland University (Germany)** <sub>(Jul 7, 2024 - Jul 27, 2024)</sub>
+- **KHUDA 7-8th (DA/AI Club, Kyung Hee University)** <sub>(2025)</sub>  
+  - NLP Track, club officer
 
-Skill
----
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+ ---
+## 🏃‍♀️‍➡️__ Now
+- Digital Competition for Software-Centered Universities: Software Track <sub>(June 2025 - Aug, 2025)</sub>
+- Kyung Hee University: Artistic Software, Web & App Track <sub>(May 2025 - Oct, 2025)</sub>
+- OSSCA (Open Source Contribution Academy) <sub>(Jul 2025 - Dec, 2025)</sub>
