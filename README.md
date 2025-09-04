@@ -15,6 +15,7 @@ good luck! 👊🌟
 - **2023** Kyung Hee University SW Festival – **1st Place & People’s Choice Award**  
 - **2024** Kyung Hee University KVS 10th (Startup Program) – **1st Place**
 - **2025** Kyung Hee University Hackathon (Khuthon) – **excellence prize**
+- **2025** SW중심대학 Digital Competition(Software Division) – **Grand Prize**
 
 ## ☁️Experience☁️
 - **Student Council, Kyung Hee University SW College** <sub>(2021 - 2023)</sub>  
@@ -30,6 +31,5 @@ good luck! 👊🌟
 
  ---
 ## 🏃‍♀️‍➡️__ Now
-- Digital Competition for Software-Centered Universities: Software Track <sub>(June 2025 - Aug, 2025)</sub>
 - Kyung Hee University: Artistic Software, Web & App Track <sub>(May 2025 - Oct, 2025)</sub>
 - OSSCA (Open Source Contribution Academy) <sub>(Jul 2025 - Dec, 2025)</sub>
