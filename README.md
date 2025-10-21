@@ -18,15 +18,15 @@ good luck! 👊🌟
 - **2025** SW중심대학 Digital Competition(Software Division) – **Grand Prize**
 
 ## ☁️Experience☁️
-- **Student Council, Kyung Hee University SW College** <sub>(2021 - 2023)</sub>  
-- **KHUDA 3rd (DA/AI Club, Kyung Hee University)** <sub>(Jan 2023 - Jul 2023)</sub>  
+- Student Council, Kyung Hee University SW College <sub>(2021 - 2023)</sub>  
+- **KHUDA 3rd (DA/AI Club, Kyung Hee University) <sub>(Jan 2023 - Jul 2023)</sub>  
   - CV Track  
-- **Java Algorithm Mentor, Kyung Hee High School** <sub>(Aug 2023 - Dec 2023)</sub>  
-- **OOP Teaching Assistant, Kyung Hee University** <sub>(Sep 2023 - Dec 2023)</sub>  
-- **C++ Algorithm Mentor, Kyung Hee High School** <sub>(Mar 2024 - Jul 2024)</sub>  
-- **Frontend Intern, Webtoon Today (StartUp)** <sub>(Mar 2024 - Jun 2024)</sub>  
-- **Exchange Program, Saarland University (Germany)** <sub>(Jul 7, 2024 - Jul 27, 2024)</sub>
-- **KHUDA 7-8th (DA/AI Club, Kyung Hee University)** <sub>(2025)</sub>  
+- Java Algorithm Mentor, Kyung Hee High School <sub>(Aug 2023 - Dec 2023)</sub>  
+- OOP Teaching Assistant, Kyung Hee University <sub>(Sep 2023 - Dec 2023)</sub>  
+- C++ Algorithm Mentor, Kyung Hee High School <sub>(Mar 2024 - Jul 2024)</sub>  
+- Frontend Intern, Webtoon Today (StartUp) <sub>(Mar 2024 - Jun 2024)</sub>  
+- Exchange Program, Saarland University (Germany) <sub>(Jul 7, 2024 - Jul 27, 2024)</sub>
+- KHUDA 7-8th (DA/AI Club, Kyung Hee University) <sub>(2025)</sub>  
   - NLP Track, club officer
 
  ---
