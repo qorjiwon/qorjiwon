@@ -1,14 +1,11 @@
 ## 백지원 *Jiwon Baek* <img src="https://raw.githubusercontent.com/git-goods/gitanimals/main/docs/snowman-melt.svg" width="50px" height="28px" style="max-width: 100%;">
-Hi there🤗 Wishing you a wonderful day🥂
-good luck! 👊🌟
+Hi there🤗
 
-<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=qorjiwon&utm_content=line">
-  <img
-    src="https://render.gitanimals.org/lines/qorjiwon"
-    width="600"
-    height="200"
-  />
-</a>  
+If you’d like to know more about me and my work,  
+check out my **[Portfolio on Notion →](https://www.notion.so/Jiwon-Baek-1b1bca3f949580fba28ccdb60a783ac8)** 🚀
+
+Wishing you a wonderful day🥂
+good luck! 🌟
 
 ## 🏆 Awards
 - **2025.08** – SW중심대학 Digital Competition (SW Division) 🥇 *Grand Prize*  
@@ -34,7 +31,3 @@ good luck! 👊🌟
 - Kyung Hee University: Artistic Software, Web & App Track <sub>(May 2025 - Oct, 2025)</sub>
 - OSSCA (Open Source Contribution Academy) <sub>(Jul 2025 - Dec, 2025)</sub>
 - GDGoC (Google Developer Groups on Campus) <sub>(Aug 2025 - Dec, 2025)</sub>
-
-
-If you’d like to know more about me and my work,  
-check out my **[Portfolio on Notion →](https://www.notion.so/Jiwon-Baek-1b1bca3f949580fba28ccdb60a783ac8)** 🚀
