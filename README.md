@@ -33,3 +33,4 @@ good luck! 👊🌟
 ## 🏃‍♀️‍➡️__ Now
 - Kyung Hee University: Artistic Software, Web & App Track <sub>(May 2025 - Oct, 2025)</sub>
 - OSSCA (Open Source Contribution Academy) <sub>(Jul 2025 - Dec, 2025)</sub>
+- GDGoC (Google Developer Groups on Campus) <sub>(Aug 2025 - Dec, 2025)</sub>
