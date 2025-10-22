@@ -8,23 +8,28 @@ Wishing you a wonderful day🥂
 good luck! 🌟
 
 ## 🏆 Awards
-- **2025.08** – SW중심대학 Digital Competition (SW Division) 🥇 *Grand Prize*  
-- **2025.05** – Kyung Hee University Hackathon (Khuthon) 🥈 *Excellence Prize*  
-- **2024.10** – Kyung Hee University Hackathon (Khuthon) 🥈 *2nd Place*  
-- **2024.09** – Kyung Hee University KVS 10th (Startup Program) 🥇 *1st Place*  
-- **2023.11** – Kyung Hee University SW Festival 🥇 *1st Place* / 🏅 *People’s Choice Award*
 
-## ☁️Experience☁️
-- Student Council, Kyung Hee University SW College <sub>(2021 - 2023)</sub>  
-- KHUDA 3rd (DA/AI Club, Kyung Hee University) <sub>(Jan 2023 - Jul 2023)</sub>  
+| Date | Competition | Award |
+|:----:|:-------------|:------|
+| **2025.08** | <sub>SW중심대학</sub> Digital Competition (SW Division) | 🥈 2nd Place |
+| **2025.05** | <sub>Kyung Hee Univ.</sub> Hackathon (Khuthon) | 🥉 Excellence Prize |
+| **2024.09** | <sub>Kyung Hee Univ.</sub> KVS 10th (Startup Program) | 🥇 1st Place |
+| **2023.11** | <sub>Kyung Hee Univ.</sub> SW Festival | 🥇 1st Place / 🏅 People’s Choice Award |
+| **2023.10** | <sub>Kyung Hee Univ.</sub> Hackathon (Khuthon) | 🥈 2nd Place |
+
+
+## ☁️ Experience
+
+- **Student Council**, Kyung Hee Univ. SW College <sub>(2021 – 2023)</sub>  
+- **KHUDA 3rd (DA/AI Club)**, Kyung Hee Univ. <sub>(Jan 2023 – Jul 2023)</sub>  
   - CV Track  
-- Java Algorithm Mentor, Kyung Hee High School <sub>(Aug 2023 - Dec 2023)</sub>  
-- OOP Teaching Assistant, Kyung Hee University <sub>(Sep 2023 - Dec 2023)</sub>  
-- C++ Algorithm Mentor, Kyung Hee High School <sub>(Mar 2024 - Jul 2024)</sub>  
-- Frontend Intern, Webtoon Today (StartUp) <sub>(Mar 2024 - Jun 2024)</sub>  
-- Exchange Program, Saarland University (Germany) <sub>(Jul 7, 2024 - Jul 27, 2024)</sub>
-- KHUDA 7-8th (DA/AI Club, Kyung Hee University) <sub>(2025)</sub>  
-  - NLP Track, club officer
+- **Java Algorithm Mentor**, Kyung Hee High School <sub>(Aug 2023 – Dec 2023)</sub>  
+- **OOP Teaching Assistant**, Kyung Hee Univ. <sub>(Sep 2023 – Dec 2023)</sub>  
+- **C++ Algorithm Mentor**, Kyung Hee High School <sub>(Mar 2024 – Jul 2024)</sub>  
+- **Frontend Intern**, *Webtoon Today (Start-Up)* <sub>(Mar 2024 – Jun 2024)</sub>  
+- **Exchange Program**, Saarland Univ. (Germany) <sub>(Jul 7 – Jul 27, 2024)</sub>  
+- **KHUDA 7–8th (DA/AI Club)**, Kyung Hee Univ. <sub>(2025)</sub>  
+  - NLP Track · Club Officer
 
  ---
 ## 🏃‍♀️‍➡️__ Now
