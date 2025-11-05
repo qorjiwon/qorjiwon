@@ -11,6 +11,7 @@ good luck! 🌟
 
 | Date | Competition | Award |
 |:----:|:-------------|:------|
+| **2025.11** | <sub>SK</sub> SK AI Summit (University) | 🥈 2nd Place |
 | **2025.08** | <sub>SW중심대학</sub> Digital Competition (SW Division) | 🥈 2nd Place |
 | **2025.05** | <sub>Kyung Hee Univ.</sub> Hackathon (Khuthon) | 🥉 Excellence Prize |
 | **2024.09** | <sub>Kyung Hee Univ.</sub> KVS 10th (Startup Program) | 🥇 1st Place |
