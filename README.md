@@ -2,7 +2,7 @@
 Hi there🤗
 
 If you’d like to know more about me and my work,  
-check out my **[Portfolio on Notion →](https://www.notion.so/Jiwon-Baek-1b1bca3f949580fba28ccdb60a783ac8)** 🚀
+check out my **[Portfolio on Surfit →](https://my.surfit.io/w/1544702738)** 🚀
 
 Wishing you a wonderful day🥂
 good luck! 🌟
