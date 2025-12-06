@@ -1,5 +1,5 @@
 ## 백지원 *Jiwon Baek* <img src="https://raw.githubusercontent.com/git-goods/gitanimals/main/docs/snowman-melt.svg" width="50px" height="28px" style="max-width: 100%;">
-Hi there🤗
+Hi, I'm Jiwon👋
 
 If you’d like to know more about me and my work,  
 check out my **[Portfolio on Surfit →](https://my.surfit.io/w/1544702738)** 🚀
