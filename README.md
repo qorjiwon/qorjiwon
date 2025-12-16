@@ -33,7 +33,3 @@ Wishing you a wonderful day🥂
 - **Exchange Program**, Saarland Univ. (Germany) <sub>(Jul 7 – Jul 27, 2024)</sub>  
 - **KHUDA 7–8th (DA/AI Club)**, Kyung Hee Univ. <sub>(2025)</sub>  
   - NLP Track · Club Officer
-
- ---
-## 🏃‍♀️‍➡️__ Now
-- GDGoC (Google Developer Groups on Campus) <sub>(Aug 2025 - Dec, 2025)</sub>
