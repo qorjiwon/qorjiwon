@@ -33,3 +33,4 @@ Wishing you a wonderful day🥂
 - **Exchange Program**, Saarland Univ. (Germany) <sub>(Jul 7 – Jul 27, 2024)</sub>  
 - **KHUDA 7–8th (DA/AI Club)**, Kyung Hee Univ. <sub>(2025)</sub>  
   - NLP Track · Club Officer
+- **Algorithm Teaching Assistant**, Kyung Hee Univ. <sub>(Mar 2025 – Jun 2025)</sub>
