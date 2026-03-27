@@ -23,14 +23,12 @@ Wishing you a wonderful day🥂
 
 ## ☁️ Experience
 
-- **Student Council**, Kyung Hee Univ. SW College <sub>(2021 – 2023)</sub>  
-- **KHUDA 3rd (DA/AI Club)**, Kyung Hee Univ. <sub>(Jan 2023 – Jul 2023)</sub>  
-  - CV Track  
+- **Student Council**, Kyung Hee Univ. SW College <sub>(2021 – 2023)</sub>
 - **Java Algorithm Mentor**, Kyung Hee High School <sub>(Aug 2023 – Dec 2023)</sub>  
 - **OOP Teaching Assistant**, Kyung Hee Univ. <sub>(Sep 2023 – Dec 2023)</sub>  
 - **C++ Algorithm Mentor**, Kyung Hee High School <sub>(Mar 2024 – Jul 2024)</sub>  
 - **Frontend Intern**, *Webtoon Today (Start-Up)* <sub>(Mar 2024 – Jun 2024)</sub>  
 - **Exchange Program**, Saarland Univ. (Germany) <sub>(Jul 7 – Jul 27, 2024)</sub>  
-- **KHUDA 7–8th (DA/AI Club)**, Kyung Hee Univ. <sub>(2025)</sub>  
-  - NLP Track · Club Officer
+- **KHUDA 7–8th (DA/AI Club)**, Kyung Hee Univ. <sub>(2023, 2025)</sub> 
+  - CV Track · NLP Track · Club Officer
 - **Algorithm Teaching Assistant**, Kyung Hee Univ. <sub>(Mar 2025 – Jun 2025)</sub>
