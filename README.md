@@ -1,6 +1,9 @@
 ## 백지원 *Jiwon Baek* <img src="https://raw.githubusercontent.com/git-goods/gitanimals/main/docs/snowman-melt.svg" width="50px" height="28px" style="max-width: 100%;">
 Hi, I'm Jiwon👋
 
+If you’d like to know more about me and my work,  
+check out my **[Portfolio on Notion →](https://gelatinous-dietician-295.notion.site/Jiwon-Baek-1b1bca3f949580fba28ccdb60a783ac8?source=copy_link)** 🚀
+
 Wishing you a wonderful day🥂
 
 - - -
