@@ -12,7 +12,8 @@ Wishing you a wonderful day🥂
 
 | Date | Competition | Award |
 |:----:|:-------------|:------|
-| **2025.11** | <sub>SK</sub> SK AI Summit (University) | 🥈 2nd Place |
+| **2025.11** | <sub>SK</sub> AI Summit (University) | 🥈 2nd Place |
+| **2025.11** | <sub>SK</sub> AI Summit (AI Scholarship Quiz) | 🥈 2nd Place |
 | **2025.08** | <sub>SW중심대학</sub> Digital Competition (SW Division) | 🥈 2nd Place |
 | **2025.05** | <sub>Kyung Hee Univ.</sub> Hackathon (Khuthon) | 🥉 Excellence Prize |
 | **2024.09** | <sub>Kyung Hee Univ.</sub> KVS 10th (Startup Program) | 🥇 1st Place |
@@ -28,6 +29,11 @@ Wishing you a wonderful day🥂
 - **C++ Algorithm Mentor**, Kyung Hee High School <sub>(Mar 2024 – Jul 2024)</sub>  
 - **Frontend Intern**, *Webtoon Today (Start-Up)* <sub>(Mar 2024 – Jun 2024)</sub>  
 - **Exchange Program**, Saarland Univ. (Germany) <sub>(Jul 7 – Jul 27, 2024)</sub>  
-- **KHUDA 7–8th (DA/AI Club)**, Kyung Hee Univ. <sub>(2023, 2025)</sub> 
+- **KHUDA (DA/AI Club)**, Kyung Hee Univ. <sub>(2023 – 2025)</sub> 
   - CV Track · NLP Track · Club Officer
 - **Algorithm Teaching Assistant**, Kyung Hee Univ. <sub>(Mar 2025 – Jun 2025)</sub>
+
+
+## 🏃 Current
+
+- **Teaching Assistant**, Samsung AI Agent Executive Training <sub>(May 2026 – Aug 2026)</sub>
