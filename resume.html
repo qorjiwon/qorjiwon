@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>백지원 | Full-Stack Developer 이력서</title>
+  <meta name="description" content="백지원 - Full-Stack Developer 이력서">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --accent-bright: #2563eb;
+      --accent-soft: #3b82f6;
+      --text-primary: #1e1e2e;
+      --text-secondary: #4a4a6a;
+      --text-muted: #6b7280;
+      --border: #e2e8f0;
+      --border-light: #f1f5f9;
+      --bg-white: #ffffff;
+      --bg-section: #f8fafc;
+      --bg-tag: #eff6ff;
+      --tag-text: #1e40af;
+      --gold: #d97706;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-primary);
+      background: #e8ecf1;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .resume-container {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: var(--bg-white);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      padding: 32px 38px;
+    }
+
+    /* ── Header ── */
+    .header {
+      padding-bottom: 18px;
+      border-bottom: 2.5px solid var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .header-main {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+    }
+
+    .profile-photo {
+      width: 100px;
+      height: 125px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1.5px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .header-top h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .header-top .subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent-bright);
+      letter-spacing: 0.3px;
+    }
+
+    .header-info {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px 0;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .header-info .info-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .header-info .info-chip .label {
+      font-weight: 700;
+      color: var(--text-muted);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .header-info .info-chip .value {
+      color: var(--text-primary);
+      font-weight: 400;
+    }
+
+    .header-info .info-chip .value a {
+      color: var(--accent-bright);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .header-info .divider {
+      width: 1px;
+      height: 12px;
+      background: var(--border);
+      margin: 0 12px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid var(--border);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 15px;
+      background: var(--accent-bright);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ── Education ── */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+      font-size: 12.5px;
+    }
+
+    .edu-item .edu-name {
+      font-weight: 400;
+      color: var(--text-primary);
+    }
+
+    .edu-item .edu-period {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    /* ── Awards ── */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 24px;
+    }
+
+    .award-item {
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 2px 0;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .award-item::before {
+      content: '🏆';
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    .award-year {
+      font-weight: 600;
+      color: var(--accent-bright);
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
+    .award-name {
+      flex: 1;
+    }
+
+    /* ── Experience ── */
+    .exp-item {
+      margin-bottom: 14px;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .exp-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .exp-role {
+      font-size: 12px;
+      color: var(--accent-bright);
+      font-weight: 600;
+    }
+
+    .exp-period {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .exp-tech {
+      margin: 5px 0 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    /* ── Compact activity list ── */
+    .activity-compact {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .compact-item {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-primary);
+      padding-left: 13px;
+      position: relative;
+    }
+
+    .compact-item::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-soft);
+      font-size: 11px;
+    }
+
+    .compact-date {
+      flex-shrink: 0;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--tag-text);
+      background: var(--bg-tag);
+      border-radius: 3px;
+      padding: 1px 7px;
+      white-space: nowrap;
+      letter-spacing: 0.2px;
+    }
+
+    .compact-text {
+      color: var(--text-secondary);
+    }
+
+    .compact-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .tech-tag {
+      font-size: 10px;
+      padding: 1px 7px;
+      background: var(--bg-tag);
+      color: var(--tag-text);
+      border-radius: 3px;
+      font-weight: 500;
+    }
+
+    /* ── Skills ── */
+    .skills-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .skill-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .skill-row-label {
+      flex-shrink: 0;
+      width: 72px;
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--accent-bright);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .skill-row-items {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .exp-details,
+    .project-details,
+    .activity-details {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-details li,
+    .project-details li,
+    .activity-details li {
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 1.5px 0;
+      padding-left: 13px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .exp-details li::before,
+    .project-details li::before,
+    .activity-details li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-soft);
+      font-size: 11px;
+    }
+
+    /* ── Projects ── */
+    .project-item {
+      margin-bottom: 16px;
+      padding: 12px 14px;
+      background: var(--bg-section);
+      border-radius: 6px;
+      border-left: 3px solid var(--accent-bright);
+    }
+
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .project-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .project-award {
+      font-size: 10.5px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .project-period {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .project-desc {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    /* ── Activities ── */
+    .activity-item {
+      margin-bottom: 12px;
+    }
+
+    .activity-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .activity-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .activity-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .activity-period {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    /* ── Language ── */
+    .lang-item {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang-name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .lang-badge {
+      font-size: 10.5px;
+      padding: 2px 10px;
+      background: var(--bg-tag);
+      color: var(--tag-text);
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body {
+        background: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      .resume-container {
+        width: 100%;
+        margin: 0;
+        padding: 24px 28px;
+        box-shadow: none;
+        min-height: auto;
+      }
+
+      .project-item {
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .tech-tag,
+      .lang-badge {
+        background: #eff6ff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .section-title::before {
+        background: var(--accent-bright) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      @page {
+        size: A4;
+        margin: 10mm 8mm;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="resume-container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-main">
+        <img src="profile_photo.jpg" alt="백지원 프로필 사진" class="profile-photo">
+        <div class="header-text">
+          <div class="header-top">
+            <h1>백지원</h1>
+            <span class="subtitle">Full-Stack Developer</span>
+          </div>
+          <div class="header-info">
+            <span class="info-chip">
+              <span class="label">Email</span>
+              <span class="value">wldnjsl2001@khu.ac.kr</span>
+            </span>
+            <span class="divider"></span>
+            <span class="info-chip">
+              <span class="label">Mobile</span>
+              <span class="value">010-4688-5964</span>
+            </span>
+            <span class="divider"></span>
+            <span class="info-chip">
+              <span class="label">GitHub</span>
+              <span class="value"><a href="https://github.com/qorjiwon" target="_blank">github.com/qorjiwon</a></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">학력</h2>
+      <div class="edu-item">
+        <span class="edu-name">경희대학교 컴퓨터공학과</span>
+        <span class="edu-period">2021.02 - 2026.02</span>
+      </div>
+      <div class="edu-item">
+        <span class="edu-name">Saarland University (Germany) 해외전공연수 프로그램 수료</span>
+        <span class="edu-period">2024.07.07 - 2024.07.27</span>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title">기술 스택</h2>
+      <div class="skills-rows">
+        <div class="skill-row">
+          <span class="skill-row-label">Language</span>
+          <span class="skill-row-items">Python · JavaScript · TypeScript</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row-label">Frontend</span>
+          <span class="skill-row-items">React · Next.js</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row-label">Backend</span>
+          <span class="skill-row-items">Node.js · Spring Boot · PostgreSQL · MySQL</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-row-label">Infra & AI</span>
+          <span class="skill-row-items">AWS · Terraform · Docker · RAG · Bedrock</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="section-title">직무 경험</h2>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-title">삼성 AI Agent 임원단 교육</span>
+            <span class="exp-role"> · 보조강사 | Part-time</span>
+          </div>
+          <span class="exp-period">2026.05 - 2026.08</span>
+        </div>
+        <ul class="exp-details">
+          <li>삼성 계열사 사장단·임원단 대상 고위급 실습형 AI 교육 운영 및 멘토링</li>
+          <li>Claude Code, Gemini 등 최신 LLM 도구를 활용한 업무 자동화·웹사이트 제작 실습 가이드</li>
+          <li>실습 중 발생하는 오류 및 막힌 부분 즉각 해결</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-title">오늘의웹툰(스타트업)</span>
+            <span class="exp-role"> · 프론트엔드 개발 인턴 | ICT인턴십</span>
+          </div>
+          <span class="exp-period">2024.03 - 2024.06</span>
+        </div>
+        <div class="exp-tech">
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">SCSS</span>
+          <span class="tech-tag">Recoil</span>
+          <span class="tech-tag">Axios</span>
+        </div>
+        <ul class="exp-details">
+          <li>B2B SaaS 대시보드 프론트 개발</li>
+          <li>반복되는 UI를 공통 컴포넌트로 리팩터링하고 렌더링 최적화</li>
+          <li>사용자 맞춤형 웹툰 추천 서비스 UI/UX 설계, 프론트 개발</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title">수상 프로젝트</h2>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">또박</span>
+          <span class="project-award">🏅 2025 SW중심대학 디지털 경진대회 SW부문 최우수상</span>
+        </div>
+        <div class="project-period">2025.05 - 2025.08</div>
+        <p class="project-desc">생성형 AI·OCR 기반 계약서 위험조항 분석 서비스. 경희대 대표팀으로 선발되어 전국 대회 참가</p>
+        <div class="exp-tech">
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">Spring Boot</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">AWS (EC2, S3, Lambda, SQS, Bedrock, OpenSearch, ECR, CloudWatch)</span>
+          <span class="tech-tag">Terraform</span>
+        </div>
+        <ul class="project-details">
+          <li>계약서 업로드 시 OCR·분석 파이프라인 설계</li>
+          <li>Bedrock 기반 RAG 파이프라인 설계: S3 저장 → Titan 임베딩 → OpenSearch 벡터 검색 → Claude 3.5 Sonnet 기반 분석 결과</li>
+          <li>Next.js 웹 인터페이스 개발 및 iOS 앱 웹 연동, QA 전용 테스트 페이지 배포로 협업 효율 개선</li>
+          <li>법률 전문가 평가 정확도 14/15점 (상용 LLM 평균 11.25점 대비 상회)</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">알잘딱깔센추</span>
+          <span class="project-award">🏅 2023 경희대학교 SW 페스티벌 대상</span>
+        </div>
+        <div class="project-period">2023.07 - 2023.11</div>
+        <p class="project-desc">백준 풀이 데이터 기반 맞춤형 알고리즘 문제 추천 서비스. React 기반 Chrome 확장 프로그램으로 구현</p>
+        <div class="exp-tech">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Chrome Extension</span>
+          <span class="tech-tag">Webpack</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Axios</span>
+          <span class="tech-tag">FastAPI</span>
+        </div>
+        <ul class="project-details">
+          <li>문제 유사도·망각 곡선·취약 유형 3가지 모델을 결합한 추천 시스템 설계</li>
+          <li>사용자가 백준 사이트 내에서 바로 추천 문제를 받아볼 수 있는 UI/UX 구현</li>
+          <li>SW 페스티벌 전체 부문 통합 1위 수상</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="section">
+      <h2 class="section-title">수상 내역</h2>
+      <div class="awards-grid">
+        <div class="award-item">
+          <span class="award-year">2025</span>
+          <span class="award-name">SK AI Summit: 학생부문 2등, AI 장학퀴즈 2등</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2025</span>
+          <span class="award-name">SW중심대학 디지털 경진대회: SW부문 최우수상</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2025</span>
+          <span class="award-name">경희대 Khuthon: 우수상</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2024</span>
+          <span class="award-name">경희대 KVS 10기: 유망팀(1등)</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2023</span>
+          <span class="award-name">경희대 SW 페스티벌: 대상, 인기상</span>
+        </div>
+        <div class="award-item">
+          <span class="award-year">2023</span>
+          <span class="award-name">경희대 Khuthon: 최우수상</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extracurricular -->
+    <section class="section">
+      <h2 class="section-title">대외활동</h2>
+
+      <div class="activity-item">
+        <div class="activity-header">
+          <span class="activity-name">GDGoC (Google Developer Groups on Campus)</span>
+          <span class="activity-period">2025.07 – 2026.03</span>
+        </div>
+        <ul class="activity-details">
+          <li>Google Cloud 스터디에서 핸즈온 랩을 수행하며 클라우드 인프라 기초 학습</li>
+          <li>GCP 기반 해커톤에 참여해 클라우드 환경에서의 서비스 구현 경험 확보</li>
+          <li>운영진으로 참여해 Three.js, React 스터디 운영</li>
+        </ul>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-header">
+          <span class="activity-name">KHUDA (경희대학교 데이터 분석/AI 학회)</span>
+          <span class="activity-period">2023.01 – 2025.12</span>
+        </div>
+        <ul class="activity-details">
+          <li>3기 CV Track으로 시작해 7-8기 NLP Track 및 운영진으로 활동</li>
+          <li>Computer Vision, Natural Language Processing 스터디를 통해 딥러닝 및 AI 기초 지식 학습</li>
+          <li>데이터 해커톤을 기획·운영하며 참가자 조율, 일정 관리, 행사 운영 담당</li>
+          <li>총 6개의 데이터/AI 프로젝트를 수행하며 인공지능을 실제 문제 해결에 적용</li>
+        </ul>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-header">
+          <span class="activity-name">경희고등학교 알고리즘 멘토링</span>
+          <span class="activity-period">2023.08 - 2024.07</span>
+        </div>
+        <div class="activity-compact" style="margin-top: 4px;">
+          <div class="compact-item">
+            <span class="compact-date">2024.03 - 2024.07</span>
+            <span class="compact-text"><strong>C++ 알고리즘</strong> 멘토링</span>
+          </div>
+          <div class="compact-item">
+            <span class="compact-date">2023.08 - 2023.12</span>
+            <span class="compact-text"><strong>JAVA 알고리즘</strong> 멘토링</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-header">
+          <span class="activity-name">경희대학교 수업도우미</span>
+        </div>
+        <div class="activity-compact" style="margin-top: 4px;">
+          <div class="compact-item">
+            <span class="compact-date">2025.03 - 2025.06</span>
+            <span class="compact-text"><strong>알고리즘</strong> 수업도우미</span>
+          </div>
+          <div class="compact-item">
+            <span class="compact-date">2023.09 - 2023.12</span>
+            <span class="compact-text"><strong>객체지향프로그래밍</strong> 수업도우미</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-header">
+          <span class="activity-name">경희대학교 소프트웨어융합대학 학생회</span>
+          <span class="activity-period">2021 – 2023</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Language -->
+    <section class="section">
+      <h2 class="section-title">어학</h2>
+      <div class="lang-item">
+        <span class="lang-name">영어</span>
+        <span class="lang-badge">OPIc – Intermediate High (IH)</span>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>

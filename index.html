@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>백지원 | Full-Stack Developer Portfolio</title>
+  <meta name="description" content="백지원 - Full-Stack Developer 포트폴리오. 교내외 SW 대회 8회 수상, 스타트업 인턴, AI·풀스택 프로젝트.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --accent-bright: #2563eb;
+      --accent-soft: #3b82f6;
+      --text-primary: #1e1e2e;
+      --text-secondary: #4a4a6a;
+      --text-muted: #6b7280;
+      --border: #e2e8f0;
+      --bg-white: #ffffff;
+      --bg-section: #f8fafc;
+      --bg-tag: #eff6ff;
+      --tag-text: #1e40af;
+      --gold: #d97706;
+      --nav-h: 64px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-primary);
+      background: var(--bg-white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-h);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-bright);
+    }
+
+    .nav-resume {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-bright);
+      border: 1.5px solid var(--accent-bright);
+      border-radius: 6px;
+      padding: 6px 14px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-resume:hover {
+      background: var(--accent-bright);
+      color: white;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    section:nth-child(even) {
+      background: var(--bg-section);
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-bright);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    .section-heading {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      margin-bottom: 32px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding-top: calc(var(--nav-h) + 64px);
+      padding-bottom: 80px;
+      background: linear-gradient(160deg, #f8fafc 0%, #ffffff 50%, #eff6ff 100%);
+    }
+
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .hero-photo {
+      width: 180px;
+      height: 225px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-greeting {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-bright);
+      margin-bottom: 8px;
+    }
+
+    .hero-name {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .hero-summary {
+      font-size: 15px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin-bottom: 28px;
+      line-height: 1.8;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-num {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent-bright);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent-bright);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--border);
+      color: var(--text-primary);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-bright);
+      color: var(--accent-bright);
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .skill-group {
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent-bright);
+      border-radius: 8px;
+      padding: 20px 22px;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .skill-group:hover {
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
+    }
+
+    .skill-group-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-bright);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-group-title::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent-bright);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skills-grid .tech-tag {
+      font-size: 13px;
+      padding: 5px 12px;
+      background: var(--bg-white);
+      color: var(--tag-text);
+      border: 1px solid rgba(37, 99, 235, 0.15);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .tech-tag {
+      font-size: 12px;
+      padding: 3px 10px;
+      background: var(--bg-tag);
+      color: var(--tag-text);
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    /* ── Experience ── */
+    .exp-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+    }
+
+    section:nth-child(even) .exp-card {
+      background: var(--bg-white);
+    }
+
+    .exp-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .exp-card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .exp-card-role {
+      font-size: 13px;
+      color: var(--accent-bright);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .exp-card-period {
+      font-size: 12px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .exp-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-card li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 3px 0 3px 16px;
+      position: relative;
+    }
+
+    .exp-card li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-soft);
+    }
+
+    /* ── Projects ── */
+    .project-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      border-left: 4px solid var(--accent-bright);
+      transition: box-shadow 0.2s;
+    }
+
+    section:nth-child(even) .project-card {
+      background: var(--bg-white);
+    }
+
+    .project-card:hover {
+      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.08);
+    }
+
+    .project-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    .project-card-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .project-award-badge {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 20px;
+      padding: 4px 12px;
+      white-space: nowrap;
+    }
+
+    .project-card-period {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .project-card-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .project-card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 14px;
+    }
+
+    .project-card li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 4px 0 4px 16px;
+      position: relative;
+    }
+
+    .project-card li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-soft);
+    }
+
+    /* ── Awards ── */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+
+    .award-card {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    section:nth-child(even) .award-card {
+      background: var(--bg-white);
+    }
+
+    .award-year {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-bright);
+      flex-shrink: 0;
+    }
+
+    /* ── Activities ── */
+    .activity-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 26px;
+      margin-bottom: 14px;
+    }
+
+    section:nth-child(even) .activity-card {
+      background: var(--bg-white);
+    }
+
+    .activity-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .activity-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .activity-card-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .activity-card-period {
+      font-size: 12px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .activity-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .activity-card li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding: 2px 0 2px 16px;
+      position: relative;
+    }
+
+    .activity-card li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-soft);
+      font-size: 12px;
+    }
+
+    .compact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .compact-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 13px;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .compact-row::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-soft);
+      font-size: 12px;
+    }
+
+    .compact-date {
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--tag-text);
+      background: var(--bg-tag);
+      border-radius: 4px;
+      padding: 2px 8px;
+    }
+
+    .compact-text {
+      color: var(--text-secondary);
+    }
+
+    .compact-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ── Education & Contact ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .info-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 26px;
+    }
+
+    section:nth-child(even) .info-card {
+      background: var(--bg-white);
+    }
+
+    .info-card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-row-name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .info-row-period {
+      font-size: 12px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--accent-bright);
+    }
+
+    .contact-link .label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      width: 52px;
+      flex-shrink: 0;
+    }
+
+    .lang-badge {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 12px;
+      background: var(--bg-tag);
+      color: var(--tag-text);
+      border-radius: 4px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--primary);
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-summary {
+        max-width: 100%;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-name {
+        font-size: 32px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">백지원</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="resume.html" class="nav-resume" target="_blank">이력서 ↗</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-inner">
+        <img src="profile_photo.jpg" alt="백지원 프로필 사진" class="hero-photo">
+        <div class="hero-content">
+          <p class="hero-greeting">Full-Stack Developer</p>
+          <h1 class="hero-name">백지원</h1>
+          <p class="hero-title">기획 · 개발 · 배포까지, 프로덕트 전 과정을 경험한 풀스택 개발자</p>
+          <p class="hero-summary">
+            교내외 SW 대회 8회 수상과 스타트업 프론트엔드 인턴 경험을 바탕으로,
+            RAG·LLM 파이프라인 설계부터 Chrome 확장 프로그램, AWS 인프라 구축까지
+            다양한 프로덕트를 직접 만들어 왔습니다.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">8회</span>
+              <span class="stat-label">SW 대회 수상</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">실무 경험</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">6+</span>
+              <span class="stat-label">AI/데이터 프로젝트</span>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a href="https://github.com/qorjiwon" class="btn btn-primary" target="_blank">GitHub</a>
+            <a href="resume.html" class="btn btn-outline" target="_blank">이력서 보기</a>
+            <a href="#" class="btn btn-outline" data-copy-email="wldnjsl2001@khu.ac.kr">이메일 보내기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label">Skills</p>
+      <h2 class="section-heading">기술 스택</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-title">Language</div>
+          <div class="skill-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">TypeScript</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Frontend</div>
+          <div class="skill-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Chrome Extension</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Backend</div>
+          <div class="skill-tags">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Infra & AI</div>
+          <div class="skill-tags">
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">RAG</span>
+            <span class="tech-tag">Bedrock</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label">Experience</p>
+      <h2 class="section-heading">직무 경험</h2>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <div>
+            <div class="exp-card-title">삼성 AI Agent 임원단 교육</div>
+            <div class="exp-card-role">보조강사 · Part-time</div>
+          </div>
+          <span class="exp-card-period">2026.05 - 2026.08</span>
+        </div>
+        <div class="skill-tags" style="margin-bottom: 12px;">
+          <span class="tech-tag">Claude Code</span>
+          <span class="tech-tag">Gemini</span>
+          <span class="tech-tag">LLM</span>
+        </div>
+        <ul>
+          <li>삼성 계열사 사장단·임원단 대상 고위급 실습형 AI 교육 운영 및 멘토링</li>
+          <li>Claude Code, Gemini 등 최신 LLM 도구를 활용한 업무 자동화·웹사이트 제작 실습 가이드</li>
+          <li>실습 중 발생하는 오류 및 막힌 부분 즉각 해결</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <div>
+            <div class="exp-card-title">오늘의웹툰 (스타트업)</div>
+            <div class="exp-card-role">프론트엔드 개발 인턴 · ICT인턴십</div>
+          </div>
+          <span class="exp-card-period">2024.03 - 2024.06</span>
+        </div>
+        <div class="skill-tags" style="margin-bottom: 12px;">
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">SCSS</span>
+          <span class="tech-tag">Recoil</span>
+          <span class="tech-tag">Axios</span>
+        </div>
+        <ul>
+          <li>B2B SaaS 대시보드 프론트 개발</li>
+          <li>반복되는 UI를 공통 컴포넌트로 리팩터링하고 렌더링 최적화</li>
+          <li>사용자 맞춤형 웹툰 추천 서비스 UI/UX 설계, 프론트 개발</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label">Projects</p>
+      <h2 class="section-heading">수상 프로젝트</h2>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <span class="project-card-title">또박</span>
+          <span class="project-award-badge">🏅 2025 SW중심대학 디지털 경진대회 SW부문 최우수상</span>
+        </div>
+        <div class="project-card-period">2025.05 - 2025.08</div>
+        <p class="project-card-desc">생성형 AI·OCR 기반 계약서 위험조항 분석 서비스. 경희대 대표팀으로 선발되어 전국 대회 참가</p>
+        <div class="skill-tags">
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">Spring Boot</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">AWS (EC2, S3, Lambda, SQS, Bedrock, OpenSearch, ECR, CloudWatch)</span>
+          <span class="tech-tag">Terraform</span>
+        </div>
+        <ul>
+          <li>계약서 업로드 시 OCR·분석 파이프라인 설계</li>
+          <li>Bedrock 기반 RAG 파이프라인 설계: S3 저장 → Titan 임베딩 → OpenSearch 벡터 검색 → Claude 3.5 Sonnet 기반 분석 결과</li>
+          <li>Next.js 웹 인터페이스 개발 및 iOS 앱 웹 연동, QA 전용 테스트 페이지 배포로 협업 효율 개선</li>
+          <li>법률 전문가 평가 정확도 14/15점 (상용 LLM 평균 11.25점 대비 상회)</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <span class="project-card-title">알잘딱깔센추</span>
+          <span class="project-award-badge">🏅 2023 경희대학교 SW 페스티벌 대상</span>
+        </div>
+        <div class="project-card-period">2023.07 - 2023.11</div>
+        <p class="project-card-desc">백준 풀이 데이터 기반 맞춤형 알고리즘 문제 추천 서비스. React 기반 Chrome 확장 프로그램으로 구현</p>
+        <div class="skill-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Chrome Extension</span>
+          <span class="tech-tag">Webpack</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Axios</span>
+          <span class="tech-tag">FastAPI</span>
+        </div>
+        <ul>
+          <li>문제 유사도·망각 곡선·취약 유형 3가지 모델을 결합한 추천 시스템 설계</li>
+          <li>사용자가 백준 사이트 내에서 바로 추천 문제를 받아볼 수 있는 UI/UX 구현</li>
+          <li>SW 페스티벌 전체 부문 통합 1위 수상</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards">
+    <div class="container">
+      <p class="section-label">Awards</p>
+      <h2 class="section-heading">수상 내역</h2>
+      <div class="awards-grid">
+        <div class="award-card"><span class="award-year">2025</span> SK AI Summit 학생부스(University) 2등</div>
+        <div class="award-card"><span class="award-year">2025</span> SK AI Summit AI 장학퀴즈 2등</div>
+        <div class="award-card"><span class="award-year">2025</span> SW중심대학 디지털 경진대회 SW부문 최우수상</div>
+        <div class="award-card"><span class="award-year">2025</span> 경희대학교 해커톤(Khuthon) 우수상</div>
+        <div class="award-card"><span class="award-year">2024</span> 경희대학교 KVS 10기 유망팀(1등)</div>
+        <div class="award-card"><span class="award-year">2023</span> 경희대학교 SW 페스티벌 대상</div>
+        <div class="award-card"><span class="award-year">2023</span> 경희대학교 SW 페스티벌 인기상</div>
+        <div class="award-card"><span class="award-year">2023</span> 경희대학교 해커톤(Khuthon) 최우수상</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities -->
+  <section id="activities">
+    <div class="container">
+      <p class="section-label">Activities</p>
+      <h2 class="section-heading">대외활동</h2>
+
+      <div class="activity-card">
+        <div class="activity-card-header">
+          <span class="activity-card-name">GDGoC (Google Developer Groups on Campus)</span>
+          <span class="activity-card-period">2025.07 – 2026.03</span>
+        </div>
+        <ul>
+          <li>Google Cloud 스터디에서 핸즈온 랩을 수행하며 클라우드 인프라 기초 학습</li>
+          <li>GCP 기반 해커톤에 참여해 클라우드 환경에서의 서비스 구현 경험 확보</li>
+          <li>운영진으로 참여해 Three.js, React 스터디 운영</li>
+        </ul>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-header">
+          <span class="activity-card-name">KHUDA (경희대학교 데이터 분석/AI 학회)</span>
+          <span class="activity-card-period">2023.01 – 2025.12</span>
+        </div>
+        <ul>
+          <li>3기 CV Track으로 시작해 7-8기 NLP Track 및 운영진으로 활동</li>
+          <li>Computer Vision, Natural Language Processing 스터디를 통해 딥러닝 및 AI 기초 지식 학습</li>
+          <li>데이터 해커톤을 기획·운영하며 참가자 조율, 일정 관리, 행사 운영 담당</li>
+          <li>총 6개의 데이터/AI 프로젝트를 수행하며 인공지능을 실제 문제 해결에 적용</li>
+        </ul>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-header">
+          <span class="activity-card-name">경희고등학교 알고리즘 멘토링</span>
+          <span class="activity-card-period">2023.08 - 2024.07</span>
+        </div>
+        <div class="compact-list">
+          <div class="compact-row">
+            <span class="compact-date">2024.03 - 2024.07</span>
+            <span class="compact-text"><strong>C++ 알고리즘</strong> 멘토링</span>
+          </div>
+          <div class="compact-row">
+            <span class="compact-date">2023.08 - 2023.12</span>
+            <span class="compact-text"><strong>JAVA 알고리즘</strong> 멘토링</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-header">
+          <span class="activity-card-name">경희대학교 수업도우미</span>
+        </div>
+        <div class="compact-list">
+          <div class="compact-row">
+            <span class="compact-date">2025.03 - 2025.06</span>
+            <span class="compact-text"><strong>알고리즘</strong> 수업도우미</span>
+          </div>
+          <div class="compact-row">
+            <span class="compact-date">2023.09 - 2023.12</span>
+            <span class="compact-text"><strong>객체지향프로그래밍</strong> 수업도우미</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-card-header">
+          <span class="activity-card-name">경희대학교 소프트웨어융합대학 학생회</span>
+          <span class="activity-card-period">2021 – 2023</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Education -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2 class="section-heading">연락처 & 학력</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-title">연락처</div>
+          <div class="contact-links">
+            <a href="mailto:wldnjsl2001@khu.ac.kr" class="contact-link">
+              <span class="label">Email</span>
+              wldnjsl2001@khu.ac.kr
+            </a>
+            <a href="tel:01046885964" class="contact-link">
+              <span class="label">Mobile</span>
+              010-4688-5964
+            </a>
+            <a href="https://github.com/qorjiwon" class="contact-link" target="_blank">
+              <span class="label">GitHub</span>
+              github.com/qorjiwon
+            </a>
+          </div>
+          <div style="margin-top: 16px;">
+            <div class="info-card-title" style="margin-bottom: 8px;">어학</div>
+            <span>영어</span>
+            <span class="lang-badge">OPIc – Intermediate High (IH)</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">학력</div>
+          <div class="info-row">
+            <span class="info-row-name">경희대학교 컴퓨터공학과</span>
+            <span class="info-row-period">2021.02 - 2026.02</span>
+          </div>
+          <div class="info-row">
+            <span class="info-row-name">Saarland University (Germany)<br>해외전공연수 프로그램 수료</span>
+            <span class="info-row-period">2024.07</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 백지원 · <a href="https://github.com/qorjiwon" target="_blank">GitHub</a> · <a href="resume.html" target="_blank">이력서</a></p>
+  </footer>
+
+  <script>
+    document.querySelector('[data-copy-email]').addEventListener('click', async (e) => {
+      e.preventDefault();
+      const btn = e.currentTarget;
+      const email = btn.dataset.copyEmail;
+      const original = btn.textContent;
+
+      const showCopied = () => {
+        btn.textContent = '이메일 복사됨';
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      };
+
+      try {
+        await navigator.clipboard.writeText(email);
+        showCopied();
+      } catch {
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showCopied();
+      }
+    });
+  </script>
+
+</body>
+
+</html>

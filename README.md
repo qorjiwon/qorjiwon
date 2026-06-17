@@ -2,7 +2,7 @@
 Hi, I'm Jiwon👋
 
 If you’d like to know more about me and my work,  
-check out my **[Portfolio on Notion →](https://gelatinous-dietician-295.notion.site/Jiwon-Baek-1b1bca3f949580fba28ccdb60a783ac8?source=copy_link)** 🚀
+check out my **[Portfolio →](https://qorjiwon.github.io/qorjiwon/)** 🚀
 
 Wishing you a wonderful day🥂
 
