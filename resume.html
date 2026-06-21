@@ -417,6 +417,15 @@
       font-weight: 500;
     }
 
+    .summary-text {
+      margin-bottom: 18px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-weight: 500;
+      word-break: keep-all;
+    }
+
     /* ── Activities ── */
     .activity-item {
       margin-bottom: 12px;
@@ -543,6 +552,8 @@
       </div>
     </header>
 
+    <p class="summary-text">프로젝트 기획 능력을 갖추고, 5개의 경진대회에서 프로젝트를 끝까지 이끌어 완성시키고 입상할 만큼 책임감 있는 풀스택 개발자입니다.</p>
+
     <!-- Education -->
     <section class="section">
       <h2 class="section-title">학력</h2>
@@ -636,15 +647,12 @@
         <div class="exp-tech">
           <span class="tech-tag">Next.js</span>
           <span class="tech-tag">Spring Boot</span>
-          <span class="tech-tag">PostgreSQL</span>
-          <span class="tech-tag">AWS (EC2, S3, Lambda, SQS, Bedrock, OpenSearch, ECR, CloudWatch)</span>
-          <span class="tech-tag">Terraform</span>
+          <span class="tech-tag">AWS</span>
         </div>
         <ul class="project-details">
-          <li>계약서 업로드 시 OCR·분석 파이프라인 설계</li>
-          <li>Bedrock 기반 RAG 파이프라인 설계: S3 저장 → Titan 임베딩 → OpenSearch 벡터 검색 → Claude 3.5 Sonnet 기반 분석 결과</li>
-          <li>Next.js 웹 인터페이스 개발 및 iOS 앱 웹 연동, QA 전용 테스트 페이지 배포로 협업 효율 개선</li>
-          <li>법률 전문가 평가 정확도 14/15점 (상용 LLM 평균 11.25점 대비 상회)</li>
+          <li>계약서를 업로드하면 OCR로 본문 텍스트를 자동 추출</li>
+          <li>독소·위험 조항을 자동으로 찾아 조항별 위험도와 근거 제시</li>
+          <li>전체 분석 결과를 한눈에 보는 요약 리포트 제공</li>
         </ul>
       </div>
 
@@ -659,15 +667,11 @@
           <span class="tech-tag">React</span>
           <span class="tech-tag">TypeScript</span>
           <span class="tech-tag">Chrome Extension</span>
-          <span class="tech-tag">Webpack</span>
-          <span class="tech-tag">Tailwind CSS</span>
-          <span class="tech-tag">Axios</span>
           <span class="tech-tag">FastAPI</span>
         </div>
         <ul class="project-details">
-          <li>문제 유사도·망각 곡선·취약 유형 3가지 모델을 결합한 추천 시스템 설계</li>
-          <li>사용자가 백준 사이트 내에서 바로 추천 문제를 받아볼 수 있는 UI/UX 구현</li>
-          <li>SW 페스티벌 전체 부문 통합 1위 수상</li>
+          <li>백준 풀이 데이터를 분석해 취약 유형에 맞는 문제를 추천</li>
+          <li>백준 사이트 안에서 바로 추천 문제를 받아보는 크롬 확장 UI 제공</li>
         </ul>
       </div>
     </section>
@@ -730,39 +734,6 @@
           <li>데이터 해커톤을 기획·운영하며 참가자 조율, 일정 관리, 행사 운영 담당</li>
           <li>총 6개의 데이터/AI 프로젝트를 수행하며 인공지능을 실제 문제 해결에 적용</li>
         </ul>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-header">
-          <span class="activity-name">경희고등학교 알고리즘 멘토링</span>
-          <span class="activity-period">2023.08 - 2024.07</span>
-        </div>
-        <div class="activity-compact" style="margin-top: 4px;">
-          <div class="compact-item">
-            <span class="compact-date">2024.03 - 2024.07</span>
-            <span class="compact-text"><strong>C++ 알고리즘</strong> 멘토링</span>
-          </div>
-          <div class="compact-item">
-            <span class="compact-date">2023.08 - 2023.12</span>
-            <span class="compact-text"><strong>JAVA 알고리즘</strong> 멘토링</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-header">
-          <span class="activity-name">경희대학교 수업도우미</span>
-        </div>
-        <div class="activity-compact" style="margin-top: 4px;">
-          <div class="compact-item">
-            <span class="compact-date">2025.03 - 2025.06</span>
-            <span class="compact-text"><strong>알고리즘</strong> 수업도우미</span>
-          </div>
-          <div class="compact-item">
-            <span class="compact-date">2023.09 - 2023.12</span>
-            <span class="compact-text"><strong>객체지향프로그래밍</strong> 수업도우미</span>
-          </div>
-        </div>
       </div>
 
       <div class="activity-item">
