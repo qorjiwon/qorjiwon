@@ -528,50 +528,93 @@
       background: var(--accent-soft);
     }
 
+    .project-media {
+      margin: 18px 0 16px;
+    }
+
+    .project-media-tabs {
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      margin-bottom: 14px;
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .media-tab {
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      border-radius: 7px;
+      padding: 7px 15px;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .media-tab:hover {
+      color: var(--accent-bright);
+    }
+
+    .media-tab.is-active {
+      background: #ffffff;
+      color: var(--accent-bright);
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+    }
+
+    .project-media-panel {
+      display: none;
+    }
+
+    .project-media-panel.is-active {
+      display: block;
+    }
+
     .project-screenshot-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 18px 16px;
+      padding: 8px 2px 4px;
     }
 
     .project-screenshot {
       position: relative;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--bg-section);
-      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-    }
-
-    .project-screenshot:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent-soft);
-      box-shadow: 0 14px 26px -12px rgba(37, 99, 235, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 auto;
+      cursor: pointer;
     }
 
     .project-screenshot img {
-      width: 100%;
-      height: auto;
       display: block;
-      aspect-ratio: 9 / 16;
+      width: 134px;
+      height: 270px;
       object-fit: cover;
-      object-position: top;
-      transition: transform 0.3s ease;
+      object-position: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 10px 24px -12px rgba(15, 23, 42, 0.28);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
     }
 
     .project-screenshot:hover img {
-      transform: scale(1.05);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 40px -16px rgba(37, 99, 235, 0.5);
     }
 
     .project-screenshot figcaption {
-      position: relative;
-      z-index: 1;
-      font-size: 11px;
+      margin-top: 11px;
+      font-size: 11.5px;
       color: var(--text-secondary);
-      padding: 8px 10px;
       text-align: center;
-      font-weight: 500;
-      background: white;
+      font-weight: 600;
     }
 
     /* hover zoom badge — replaces the "click to enlarge" text */
@@ -604,6 +647,8 @@
 
     .project-architecture {
       position: relative;
+      max-width: 660px;
+      margin: 0 auto;
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
@@ -619,11 +664,8 @@
 
     .project-architecture img {
       width: 100%;
-      height: 240px;
+      height: auto;
       display: block;
-      object-fit: contain;
-      object-position: center;
-      padding: 14px;
       transition: transform 0.3s ease;
     }
 
@@ -1075,18 +1117,9 @@
         flex-direction: column;
       }
 
-      .project-screenshot-grid {
-        display: flex;
-        overflow-x: auto;
-        gap: 12px;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 4px;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .project-screenshot {
-        flex: 0 0 140px;
-        scroll-snap-align: start;
+      .project-screenshot img {
+        width: 119px;
+        height: 240px;
       }
     }
   </style>
@@ -1274,34 +1307,38 @@
         </div>
         <div class="project-card-period">2025.05 - 2025.08</div>
         <p class="project-card-desc">생성형 AI·OCR 기반 계약서 위험조항 분석 서비스. 경희대 대표팀으로 선발되어 전국 대회 참가</p>
-        <div class="project-screenshots">
-          <div class="project-screenshots-title">서비스 아키텍처</div>
-          <figure class="project-architecture" data-lightbox data-caption="또박 AWS 기반 서비스 아키텍처">
-            <img src="images/ttobak/architecture.png" alt="또박 AWS 기반 서비스 아키텍처 다이어그램" loading="lazy">
-          </figure>
-        </div>
-        <div class="project-screenshots">
-          <div class="project-screenshots-title">서비스 화면</div>
-          <div class="project-screenshot-grid">
-            <figure class="project-screenshot" data-lightbox data-caption="계약서 업로드">
-              <img src="images/ttobak/upload.png" alt="또박 계약서 업로드 화면" loading="lazy">
-              <figcaption>계약서 업로드</figcaption>
-            </figure>
-            <figure class="project-screenshot" data-lightbox data-caption="OCR 텍스트 확인">
-              <img src="images/ttobak/preview.png" alt="또박 OCR 텍스트 확인 화면" loading="lazy">
-              <figcaption>OCR 텍스트 확인</figcaption>
-            </figure>
-            <figure class="project-screenshot" data-lightbox data-caption="위험조항 분석">
-              <img src="images/ttobak/analyze.png" alt="또박 위험조항 분석 화면" loading="lazy">
-              <figcaption>위험조항 분석</figcaption>
-            </figure>
-            <figure class="project-screenshot" data-lightbox data-caption="분석 결과 요약">
-              <img src="images/ttobak/summary.png" alt="또박 분석 결과 요약 화면" loading="lazy">
-              <figcaption>분석 결과 요약</figcaption>
-            </figure>
-            <figure class="project-screenshot" data-lightbox data-caption="조항 상세 분석">
-              <img src="images/ttobak/detail.png" alt="또박 조항 상세 분석 화면" loading="lazy">
-              <figcaption>조항 상세 분석</figcaption>
+        <div class="project-media">
+          <div class="project-media-tabs" role="tablist">
+            <button type="button" class="media-tab is-active" data-tab="screens">서비스 화면</button>
+            <button type="button" class="media-tab" data-tab="arch">서비스 아키텍처</button>
+          </div>
+          <div class="project-media-panel is-active" data-panel="screens">
+            <div class="project-screenshot-grid">
+              <figure class="project-screenshot" data-lightbox data-caption="계약서 업로드">
+                <img src="images/ddobak/upload.png" alt="또박 계약서 업로드 화면" loading="lazy">
+                <figcaption>계약서 업로드</figcaption>
+              </figure>
+              <figure class="project-screenshot" data-lightbox data-caption="OCR 텍스트 확인">
+                <img src="images/ddobak/preview.png" alt="또박 OCR 텍스트 확인 화면" loading="lazy">
+                <figcaption>OCR 텍스트 확인</figcaption>
+              </figure>
+              <figure class="project-screenshot" data-lightbox data-caption="위험조항 분석">
+                <img src="images/ddobak/analyze.png" alt="또박 위험조항 분석 화면" loading="lazy">
+                <figcaption>위험조항 분석</figcaption>
+              </figure>
+              <figure class="project-screenshot" data-lightbox data-caption="분석 결과 요약">
+                <img src="images/ddobak/summary.png" alt="또박 분석 결과 요약 화면" loading="lazy">
+                <figcaption>분석 결과 요약</figcaption>
+              </figure>
+              <figure class="project-screenshot" data-lightbox data-caption="조항 상세 분석">
+                <img src="images/ddobak/detail.png" alt="또박 조항 상세 분석 화면" loading="lazy">
+                <figcaption>조항 상세 분석</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="project-media-panel" data-panel="arch">
+            <figure class="project-architecture" data-lightbox data-caption="또박 AWS 기반 서비스 아키텍처">
+              <img src="images/ddobak/architecture.png" alt="또박 AWS 기반 서비스 아키텍처 다이어그램" loading="lazy">
             </figure>
           </div>
         </div>
@@ -1315,7 +1352,7 @@
         <ul>
           <li>계약서 업로드 시 OCR·분석 파이프라인 설계</li>
           <li>Bedrock 기반 RAG 파이프라인 설계: S3 저장 → Titan 임베딩 → OpenSearch 벡터 검색 → Claude 3.5 Sonnet 기반 분석 결과</li>
-          <li>Next.js 웹 인터페이스 개발 및 iOS 앱 웹 연동, QA 전용 테스트 페이지 배포로 협업 효율 개선</li>
+          <li>Next.js 웹 인터페이스 개발 및 iOS 앱 웹뷰 연동, QA 전용 테스트 페이지 배포로 협업 효율 개선</li>
           <li>법률 전문가 평가 정확도 14/15점 (상용 LLM 평균 11.25점 대비 상회)</li>
         </ul>
       </div>
@@ -1337,7 +1374,7 @@
           <span class="tech-tag">FastAPI</span>
         </div>
         <ul>
-          <li>문제 유사도·망각 곡선·취약 유형 3가지 모델을 결합한 추천 시스템 설계</li>
+          <li>문제 유사도·망각 곡선·취약 유형 3가지 모델별 추천 기능을 각각 구현</li>
           <li>사용자가 백준 사이트 내에서 바로 추천 문제를 받아볼 수 있는 UI/UX 구현</li>
           <li>SW 페스티벌 전체 부문 통합 1위 수상</li>
         </ul>
@@ -1522,6 +1559,18 @@
       }
     });
     }
+
+    document.querySelectorAll('.project-media').forEach((media) => {
+      const tabs = media.querySelectorAll('.media-tab');
+      const panels = media.querySelectorAll('.project-media-panel');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const name = tab.dataset.tab;
+          tabs.forEach((t) => t.classList.toggle('is-active', t === tab));
+          panels.forEach((p) => p.classList.toggle('is-active', p.dataset.panel === name));
+        });
+      });
+    });
 
     const lightbox = document.getElementById('lightbox');
     const lightboxFrame = document.getElementById('lightbox-frame');
