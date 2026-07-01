@@ -529,6 +529,53 @@
       text-wrap: pretty;
     }
 
+    .project-media-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .project-demo-link {
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+      border-radius: 8px;
+      padding: 8px 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .project-demo-link::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 55%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+      transform: skewX(-20deg);
+      transition: left 0.6s ease;
+    }
+
+    .project-demo-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(37, 99, 235, 0.42);
+    }
+
+    .project-demo-link:hover::after {
+      left: 130%;
+    }
+
     .project-card ul {
       list-style: none;
       padding: 0;
@@ -581,7 +628,6 @@
       display: inline-flex;
       gap: 4px;
       padding: 4px;
-      margin-bottom: 14px;
       background: var(--bg-section);
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -1400,11 +1446,14 @@
           <span class="project-award-badge">🥈 2025 SW중심대학 디지털 경진대회 SW부문 최우수상</span>
         </div>
         <div class="project-card-period">2025.05 - 2025.08</div>
-        <p class="project-card-desc">생성형 AI·OCR 기반 계약서 위험조항 분석 서비스. 경희대 대표팀으로 선발되어 전국 대회 참가</p>
+        <p class="project-card-desc">생성형 AI·OCR 기반 계약서 위험조항 분석 서비스. 경희대학교 대표팀으로 선발되어 전국 대회 참가</p>
         <div class="project-media">
-          <div class="project-media-tabs" role="tablist">
-            <button type="button" class="media-tab is-active" data-tab="screens">서비스 화면</button>
-            <button type="button" class="media-tab" data-tab="arch">서비스 아키텍처</button>
+          <div class="project-media-bar">
+            <div class="project-media-tabs" role="tablist">
+              <button type="button" class="media-tab is-active" data-tab="screens">서비스 화면</button>
+              <button type="button" class="media-tab" data-tab="arch">서비스 아키텍처</button>
+            </div>
+            <a class="project-demo-link" href="https://ddobak-web.vercel.app/" target="_blank" rel="noopener noreferrer">체험하러 가기</a>
           </div>
           <div class="project-media-panel is-active" data-panel="screens">
             <div class="project-screenshot-grid">
