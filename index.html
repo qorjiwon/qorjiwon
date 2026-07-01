@@ -18,14 +18,16 @@
       --accent-soft: #3b82f6;
       --text-primary: #1e1e2e;
       --text-secondary: #4a4a6a;
-      --text-muted: #6b7280;
+      --text-muted: #5b6371;
       --border: #e2e8f0;
       --bg-white: #ffffff;
       --bg-section: #f8fafc;
       --bg-tag: #eff6ff;
       --tag-text: #1e40af;
-      --gold: #d97706;
+      --gold: #b45309;
       --nav-h: 64px;
+      --z-nav: 100;
+      --z-overlay: 200;
     }
 
     * {
@@ -36,6 +38,28 @@
 
     html {
       scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+
+      html {
+        scroll-behavior: auto !important;
+      }
+
+      .project-screenshot:hover img,
+      .project-architecture:hover,
+      .project-architecture:hover img {
+        transform: none !important;
+      }
     }
 
     body {
@@ -61,7 +85,13 @@
       background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-      z-index: 100;
+      z-index: var(--z-nav);
+    }
+
+    @supports not (backdrop-filter: blur(12px)) {
+      .nav {
+        background: #ffffff;
+      }
     }
 
     .nav-inner {
@@ -155,20 +185,17 @@
     }
 
     section {
-      padding: 72px 0;
+      padding: clamp(56px, 8vw, 96px) 0;
     }
 
     section:nth-child(even) {
       background: var(--bg-section);
     }
 
-    .section-label {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent-bright);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
+    /* Denser list-driven sections sit a touch tighter */
+    #awards,
+    #activities {
+      padding: clamp(48px, 6.5vw, 80px) 0;
     }
 
     .section-heading {
@@ -176,7 +203,19 @@
       font-weight: 800;
       color: var(--primary);
       letter-spacing: -0.5px;
+      line-height: 1.2;
+      text-wrap: balance;
       margin-bottom: 32px;
+    }
+
+    /* Vary heading-to-content gap for rhythm */
+    #awards .section-heading,
+    #activities .section-heading {
+      margin-bottom: 24px;
+    }
+
+    #projects .section-heading {
+      margin-bottom: 40px;
     }
 
     /* ── Hero ── */
@@ -241,6 +280,7 @@
       max-width: 600px;
       margin-bottom: 18px;
       word-break: keep-all;
+      text-wrap: pretty;
     }
 
     .hero-contact-row {
@@ -296,33 +336,27 @@
       color: var(--text-muted);
     }
 
-    /* ── Skills ── */
+    /* ── Skills ── (ruled definition list, no card chrome) */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      grid-template-columns: 1fr;
+      border-top: 1px solid var(--border);
     }
 
     .skill-group {
-      background: var(--bg-section);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent-bright);
-      border-radius: 8px;
-      padding: 20px 22px;
-      transition: box-shadow 0.2s ease;
-    }
-
-    .skill-group:hover {
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px 24px;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     .skill-group-title {
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--accent-bright);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 14px;
+      letter-spacing: 0.01em;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -346,11 +380,18 @@
     .skills-grid .tech-tag {
       font-size: 13px;
       padding: 5px 12px;
-      background: var(--bg-white);
+      background: var(--bg-section);
       color: var(--tag-text);
       border: 1px solid rgba(37, 99, 235, 0.15);
       border-radius: 6px;
       font-weight: 500;
+    }
+
+    @media (max-width: 520px) {
+      .skill-group {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
     }
 
     .tech-tag {
@@ -418,6 +459,8 @@
       color: var(--text-secondary);
       padding: 3px 0 3px 16px;
       position: relative;
+      max-width: 65ch;
+      text-wrap: pretty;
     }
 
     .exp-card li::before {
@@ -434,7 +477,6 @@
       border-radius: 12px;
       padding: 28px 32px;
       margin-bottom: 24px;
-      border-left: 4px solid var(--accent-bright);
       transition: box-shadow 0.2s;
     }
 
@@ -459,6 +501,7 @@
       font-size: 22px;
       font-weight: 800;
       color: var(--primary);
+      text-wrap: balance;
     }
 
     .project-award-badge {
@@ -483,6 +526,7 @@
       color: var(--text-secondary);
       font-weight: 500;
       margin-bottom: 14px;
+      text-wrap: pretty;
     }
 
     .project-card ul {
@@ -496,6 +540,7 @@
       color: var(--text-secondary);
       padding: 4px 0 4px 16px;
       position: relative;
+      text-wrap: pretty;
     }
 
     .project-card li::before {
@@ -676,7 +721,7 @@
     .lightbox {
       position: fixed;
       inset: 0;
-      z-index: 200;
+      z-index: var(--z-overlay);
       display: none;
       align-items: center;
       justify-content: center;
@@ -795,11 +840,17 @@
       word-break: keep-all;
     }
 
+    .awards-rank .medal {
+      font-size: 1.4em;
+      vertical-align: -0.08em;
+    }
+
     .awards-name {
       font-size: 14px;
       font-weight: 400;
       color: var(--text-secondary);
       line-height: 1.55;
+      text-wrap: pretty;
     }
 
     .awards-row--1 .awards-rank {
@@ -838,21 +889,19 @@
       }
     }
 
-    /* ── Activities ── */
+    /* ── Activities ── (ruled rows, no card chrome) */
     .activity-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 22px 26px;
-      margin-bottom: 14px;
+      padding: 20px 0;
+      border-top: 1px solid var(--border);
     }
 
-    section:nth-child(even) .activity-card {
-      background: var(--bg-white);
+    .activity-card:first-of-type {
+      border-top: none;
+      padding-top: 0;
     }
 
     .activity-card:last-child {
-      margin-bottom: 0;
+      padding-bottom: 0;
     }
 
     .activity-card-header {
@@ -916,6 +965,8 @@
       color: var(--text-secondary);
       padding: 2px 0 2px 16px;
       position: relative;
+      max-width: 65ch;
+      text-wrap: pretty;
     }
 
     .activity-card li::before {
@@ -972,7 +1023,7 @@
     /* ── Education & Contact ── */
     .info-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
     }
 
@@ -1105,14 +1156,6 @@
         gap: 12px 32px;
       }
 
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
       .project-card-header {
         flex-direction: column;
       }
@@ -1120,6 +1163,60 @@
       .project-screenshot img {
         width: 119px;
         height: 240px;
+      }
+    }
+
+    /* ── Print ── */
+    @media print {
+
+      *,
+      *::before,
+      *::after {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        box-shadow: none !important;
+      }
+
+      .nav,
+      .lang-switch,
+      .nav-resume,
+      .lightbox,
+      footer {
+        display: none !important;
+      }
+
+      body {
+        background: #ffffff;
+      }
+
+      .hero {
+        background: #ffffff !important;
+        padding-top: 0;
+      }
+
+      section,
+      section:nth-child(even) {
+        background: #ffffff !important;
+        padding: 24px 0;
+        break-inside: avoid;
+      }
+
+      .container,
+      .nav-inner {
+        max-width: 100%;
+      }
+
+      .skill-group,
+      .exp-card,
+      .project-card,
+      .activity-card,
+      .info-card,
+      .awards-year-group {
+        break-inside: avoid;
+      }
+
+      a {
+        color: inherit;
       }
     }
   </style>
@@ -1201,7 +1298,6 @@
   <!-- Skills -->
   <section id="skills">
     <div class="container">
-      <p class="section-label">Skills</p>
       <h2 class="section-heading">기술 스택</h2>
       <div class="skills-grid">
         <div class="skill-group">
@@ -1247,7 +1343,6 @@
   <!-- Experience -->
   <section id="experience">
     <div class="container">
-      <p class="section-label">Experience</p>
       <h2 class="section-heading">직무 경험</h2>
 
       <div class="exp-card">
@@ -1297,13 +1392,12 @@
   <!-- Projects -->
   <section id="projects">
     <div class="container">
-      <p class="section-label">Projects</p>
       <h2 class="section-heading">수상 프로젝트</h2>
 
       <div class="project-card">
         <div class="project-card-header">
           <span class="project-card-title">또박</span>
-          <span class="project-award-badge">🏅 2025 SW중심대학 디지털 경진대회 SW부문 최우수상</span>
+          <span class="project-award-badge">🥈 2025 SW중심대학 디지털 경진대회 SW부문 최우수상</span>
         </div>
         <div class="project-card-period">2025.05 - 2025.08</div>
         <p class="project-card-desc">생성형 AI·OCR 기반 계약서 위험조항 분석 서비스. 경희대 대표팀으로 선발되어 전국 대회 참가</p>
@@ -1352,7 +1446,7 @@
         <ul>
           <li>계약서 업로드 시 OCR·분석 파이프라인 설계</li>
           <li>Bedrock 기반 RAG 파이프라인 설계: S3 저장 → Titan 임베딩 → OpenSearch 벡터 검색 → Claude 3.5 Sonnet 기반 분석 결과</li>
-          <li>Next.js 웹 인터페이스 개발 및 iOS 앱 웹뷰 연동, QA 전용 테스트 페이지 배포로 협업 효율 개선</li>
+          <li>Next.js 웹 인터페이스 개발 및 iOS 앱 웹뷰 연동</li>
           <li>LLM as a Judge 방식으로 평가한 또박 AI 분석 정확도 14/15점 (상용 LLM 평균 11.25점 대비 상회)</li>
         </ul>
       </div>
@@ -1360,7 +1454,7 @@
       <div class="project-card">
         <div class="project-card-header">
           <span class="project-card-title">알잘딱깔센추</span>
-          <span class="project-award-badge">🏅 2023 경희대학교 SW 페스티벌 대상</span>
+          <span class="project-award-badge">🥇 2023 경희대학교 SW 페스티벌 대상</span>
         </div>
         <div class="project-card-period">2023.07 - 2023.11</div>
         <p class="project-card-desc">백준 풀이 데이터 기반 맞춤형 알고리즘 문제 추천 서비스. React 기반 Chrome 확장 프로그램으로 구현</p>
@@ -1385,26 +1479,25 @@
   <!-- Awards -->
   <section id="awards">
     <div class="container">
-      <p class="section-label">Awards</p>
       <h2 class="section-heading">수상 내역</h2>
       <div class="awards-board">
         <div class="awards-year-group">
           <div class="awards-year">2025</div>
           <div class="awards-rows">
             <div class="awards-row awards-row--2">
-              <span class="awards-rank">최우수상</span>
+              <span class="awards-rank"><span class="medal">🥈</span> 최우수상</span>
               <span class="awards-name">SW중심대학 디지털 경진대회 SW부문</span>
             </div>
             <div class="awards-row awards-row--2">
-              <span class="awards-rank">2등</span>
+              <span class="awards-rank"><span class="medal">🥈</span> 2등</span>
               <span class="awards-name">SK AI Summit 학생부스(University)</span>
             </div>
             <div class="awards-row awards-row--2">
-              <span class="awards-rank">2등</span>
+              <span class="awards-rank"><span class="medal">🥈</span> 2등</span>
               <span class="awards-name">SK AI Summit AI 장학퀴즈</span>
             </div>
             <div class="awards-row">
-              <span class="awards-rank">우수상</span>
+              <span class="awards-rank"><span class="medal">🥉</span> 우수상</span>
               <span class="awards-name">경희대학교 해커톤(Khuthon)</span>
             </div>
           </div>
@@ -1413,7 +1506,7 @@
           <div class="awards-year">2024</div>
           <div class="awards-rows">
             <div class="awards-row awards-row--1">
-              <span class="awards-rank">1등</span>
+              <span class="awards-rank"><span class="medal">🥇</span> 1등</span>
               <span class="awards-name">경희대학교 KVS 10기 유망팀</span>
             </div>
           </div>
@@ -1422,11 +1515,11 @@
           <div class="awards-year">2023</div>
           <div class="awards-rows">
             <div class="awards-row awards-row--1">
-              <span class="awards-rank">대상 · 인기상</span>
+              <span class="awards-rank"><span class="medal">🥇</span>&nbsp;대상 · <span class="medal">💖</span>&nbsp;인기상</span>
               <span class="awards-name">경희대학교 SW 페스티벌</span>
             </div>
             <div class="awards-row awards-row--2">
-              <span class="awards-rank">최우수상</span>
+              <span class="awards-rank"><span class="medal">🥈</span> 최우수상</span>
               <span class="awards-name">경희대학교 해커톤(Khuthon)</span>
             </div>
           </div>
@@ -1438,7 +1531,6 @@
   <!-- Activities -->
   <section id="activities">
     <div class="container">
-      <p class="section-label">Activities</p>
       <h2 class="section-heading">대외활동</h2>
 
       <div class="activity-card">

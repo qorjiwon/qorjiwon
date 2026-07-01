@@ -25,7 +25,7 @@
       --bg-section: #f8fafc;
       --bg-tag: #eff6ff;
       --tag-text: #1e40af;
-      --gold: #d97706;
+      --gold: #b45309;
     }
 
     * {
@@ -76,7 +76,8 @@
     .header-top {
       display: flex;
       align-items: baseline;
-      gap: 14px;
+      flex-wrap: wrap;
+      gap: 4px 14px;
       margin-bottom: 10px;
     }
 
@@ -84,7 +85,7 @@
       font-size: 32px;
       font-weight: 800;
       color: var(--primary);
-      letter-spacing: -0.5px;
+      letter-spacing: -0.02em;
     }
 
     .header-top .subtitle {
@@ -142,27 +143,20 @@
       margin-bottom: 18px;
     }
 
+    .section--major {
+      margin-top: 26px;
+    }
+
     .section-title {
       font-size: 13px;
       font-weight: 800;
       color: var(--primary);
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 0.8px;
       padding-bottom: 6px;
       border-bottom: 1.5px solid var(--border);
       margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section-title::before {
-      content: '';
-      width: 4px;
-      height: 15px;
-      background: var(--accent-bright);
-      border-radius: 2px;
-      flex-shrink: 0;
+      text-wrap: balance;
     }
 
     /* ── Education ── */
@@ -203,9 +197,13 @@
     }
 
     .award-item::before {
-      content: '🏆';
-      font-size: 10px;
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--accent-soft);
+      border-radius: 1px;
       flex-shrink: 0;
+      transform: translateY(-2px);
     }
 
     .award-year {
@@ -287,12 +285,10 @@
 
     .compact-date {
       flex-shrink: 0;
-      font-size: 10px;
+      font-size: 10.5px;
       font-weight: 600;
-      color: var(--tag-text);
-      background: var(--bg-tag);
-      border-radius: 3px;
-      padding: 1px 7px;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
       white-space: nowrap;
       letter-spacing: 0.2px;
     }
@@ -307,7 +303,7 @@
     }
 
     .tech-tag {
-      font-size: 10px;
+      font-size: 10.5px;
       padding: 1px 7px;
       background: var(--bg-tag);
       color: var(--tag-text);
@@ -332,8 +328,8 @@
 
     .skill-row-label {
       flex-shrink: 0;
-      width: 72px;
-      font-size: 9.5px;
+      width: 84px;
+      font-size: 11px;
       font-weight: 700;
       color: var(--accent-bright);
       text-transform: uppercase;
@@ -361,6 +357,8 @@
       padding-left: 13px;
       position: relative;
       line-height: 1.7;
+      text-wrap: pretty;
+      word-break: keep-all;
     }
 
     .exp-details li::before,
@@ -379,7 +377,7 @@
       padding: 12px 14px;
       background: var(--bg-section);
       border-radius: 6px;
-      border-left: 3px solid var(--accent-bright);
+      border: 1px solid var(--border);
     }
 
     .project-item:last-child {
@@ -397,6 +395,7 @@
       font-size: 14px;
       font-weight: 800;
       color: var(--primary);
+      text-wrap: balance;
     }
 
     .project-award {
@@ -415,6 +414,8 @@
       color: var(--text-secondary);
       margin-bottom: 5px;
       font-weight: 500;
+      text-wrap: pretty;
+      word-break: keep-all;
     }
 
     .summary-text {
@@ -424,6 +425,7 @@
       line-height: 1.6;
       font-weight: 500;
       word-break: keep-all;
+      text-wrap: pretty;
     }
 
     /* ── Activities ── */
@@ -477,6 +479,30 @@
       font-weight: 600;
     }
 
+    /* ── Responsive (screen only) ── */
+    @media (max-width: 820px) {
+      .resume-container {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 24px 18px;
+        box-shadow: none;
+      }
+
+      .header-main,
+      .exp-header,
+      .project-header {
+        flex-wrap: wrap;
+        gap: 6px 12px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .awards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ── Print ── */
     @media print {
       body {
@@ -499,17 +525,26 @@
         print-color-adjust: exact;
       }
 
-      .tech-tag,
+      .tech-tag {
+        background: #eff6ff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
       .lang-badge {
         background: #eff6ff !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
 
-      .section-title::before {
-        background: var(--accent-bright) !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+      a {
+        color: var(--accent-bright);
+      }
+
+      .project-item,
+      .exp-item,
+      .activity-item {
+        break-inside: avoid;
       }
 
       @page {
@@ -530,22 +565,22 @@
         <div class="header-text">
           <div class="header-top">
             <h1>백지원</h1>
-            <span class="subtitle">Full-Stack Developer</span>
+            <span class="subtitle" lang="en">Full-Stack Developer</span>
           </div>
           <div class="header-info">
             <span class="info-chip">
               <span class="label">Email</span>
-              <span class="value">wldnjsl2001@gmail.com</span>
+              <span class="value"><a href="mailto:wldnjsl2001@gmail.com">wldnjsl2001@gmail.com</a></span>
             </span>
             <span class="divider"></span>
             <span class="info-chip">
               <span class="label">Mobile</span>
-              <span class="value">010-4688-5964</span>
+              <span class="value"><a href="tel:+821046885964">010-4688-5964</a></span>
             </span>
             <span class="divider"></span>
             <span class="info-chip">
               <span class="label">GitHub</span>
-              <span class="value"><a href="https://github.com/qorjiwon" target="_blank">github.com/qorjiwon</a></span>
+              <span class="value"><a href="https://github.com/qorjiwon" target="_blank" rel="noopener">github.com/qorjiwon</a></span>
             </span>
           </div>
         </div>
@@ -591,7 +626,7 @@
     </section>
 
     <!-- Experience -->
-    <section class="section">
+    <section class="section section--major">
       <h2 class="section-title">직무 경험</h2>
 
       <div class="exp-item">
@@ -633,13 +668,13 @@
     </section>
 
     <!-- Projects -->
-    <section class="section">
+    <section class="section section--major">
       <h2 class="section-title">수상 프로젝트</h2>
 
       <div class="project-item">
         <div class="project-header">
           <span class="project-title">또박</span>
-          <span class="project-award">🏅 2025 SW중심대학 디지털 경진대회 SW부문 최우수상</span>
+          <span class="project-award">2025 SW중심대학 디지털 경진대회 SW부문 최우수상</span>
         </div>
         <div class="project-period">2025.05 - 2025.08</div>
         <p class="project-desc">생성형 AI·OCR 기반 계약서 위험조항 분석 서비스. 경희대 대표팀으로 선발되어 전국 대회 참가</p>
@@ -658,7 +693,7 @@
       <div class="project-item">
         <div class="project-header">
           <span class="project-title">알잘딱깔센추</span>
-          <span class="project-award">🏅 2023 경희대학교 SW 페스티벌 대상</span>
+          <span class="project-award">2023 경희대학교 SW 페스티벌 대상</span>
         </div>
         <div class="project-period">2023.07 - 2023.11</div>
         <p class="project-desc">백준 풀이 데이터 기반 맞춤형 알고리즘 문제 추천 서비스. React 기반 Chrome 확장 프로그램으로 구현</p>

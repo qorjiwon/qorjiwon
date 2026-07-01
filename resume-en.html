@@ -18,14 +18,14 @@
       --accent-soft: #3b82f6;
       --text-primary: #1e1e2e;
       --text-secondary: #4a4a6a;
-      --text-muted: #6b7280;
+      --text-muted: #586073;
       --border: #e2e8f0;
       --border-light: #f1f5f9;
       --bg-white: #ffffff;
       --bg-section: #f8fafc;
       --bg-tag: #eff6ff;
       --tag-text: #1e40af;
-      --gold: #d97706;
+      --gold: #b45309;
     }
 
     * {
@@ -85,6 +85,7 @@
       font-weight: 800;
       color: var(--primary);
       letter-spacing: -0.5px;
+      text-wrap: balance;
     }
 
     .header-top .subtitle {
@@ -112,7 +113,7 @@
     .header-info .info-chip .label {
       font-weight: 700;
       color: var(--text-muted);
-      font-size: 10px;
+      font-size: 10.5px;
       text-transform: uppercase;
       letter-spacing: 0.6px;
     }
@@ -139,7 +140,7 @@
 
     /* ── Section ── */
     .section {
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
     .section-title {
@@ -154,6 +155,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      text-wrap: balance;
     }
 
     .section-title::before {
@@ -199,13 +201,16 @@
       padding: 2px 0;
       display: flex;
       align-items: baseline;
-      gap: 6px;
+      gap: 7px;
     }
 
     .award-item::before {
-      content: '🏆';
-      font-size: 10px;
+      content: '◆';
+      font-size: 8px;
+      line-height: 1;
+      color: var(--accent-soft);
       flex-shrink: 0;
+      transform: translateY(-1px);
     }
 
     .award-year {
@@ -221,7 +226,7 @@
 
     /* ── Experience ── */
     .exp-item {
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .exp-item:last-child {
@@ -239,6 +244,7 @@
       font-size: 13.5px;
       font-weight: 700;
       color: var(--text-primary);
+      text-wrap: balance;
     }
 
     .exp-role {
@@ -332,12 +338,12 @@
 
     .skill-row-label {
       flex-shrink: 0;
-      width: 72px;
-      font-size: 9.5px;
+      width: 80px;
+      font-size: 10.5px;
       font-weight: 700;
       color: var(--accent-bright);
       text-transform: uppercase;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.2px;
     }
 
     .skill-row-items {
@@ -350,6 +356,7 @@
     .activity-details {
       list-style: none;
       padding: 0;
+      max-width: 72ch;
     }
 
     .exp-details li,
@@ -361,6 +368,7 @@
       padding-left: 13px;
       position: relative;
       line-height: 1.7;
+      text-wrap: pretty;
     }
 
     .exp-details li::before,
@@ -379,7 +387,7 @@
       padding: 12px 14px;
       background: var(--bg-section);
       border-radius: 6px;
-      border-left: 3px solid var(--accent-bright);
+      border: 1px solid var(--border);
     }
 
     .project-item:last-child {
@@ -397,12 +405,24 @@
       font-size: 14px;
       font-weight: 800;
       color: var(--primary);
+      text-wrap: balance;
     }
 
     .project-award {
       font-size: 10.5px;
       color: var(--gold);
       font-weight: 600;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 5px;
+    }
+
+    .project-award::before {
+      content: '◆';
+      font-size: 8px;
+      line-height: 1;
+      color: var(--gold);
+      flex-shrink: 0;
     }
 
     .project-period {
@@ -415,6 +435,8 @@
       color: var(--text-secondary);
       margin-bottom: 5px;
       font-weight: 500;
+      max-width: 72ch;
+      text-wrap: pretty;
     }
 
     .summary-text {
@@ -423,6 +445,8 @@
       color: var(--text-secondary);
       line-height: 1.6;
       font-weight: 500;
+      max-width: 72ch;
+      text-wrap: pretty;
     }
 
     /* ── Activities ── */
@@ -445,6 +469,7 @@
       font-size: 13px;
       font-weight: 700;
       color: var(--text-primary);
+      text-wrap: balance;
     }
 
     .activity-period {
@@ -474,6 +499,37 @@
       color: var(--tag-text);
       border-radius: 4px;
       font-weight: 600;
+    }
+
+    /* ── Responsive (screen only) ── */
+    @media screen and (max-width: 800px) {
+      body {
+        background: #fff;
+      }
+
+      .resume-container {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 20px 16px;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .header-main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .header-text {
+        min-width: 0;
+        flex: 1 1 200px;
+      }
+
+      .header-top {
+        flex-wrap: wrap;
+      }
     }
 
     /* ── Print ── */
@@ -547,10 +603,11 @@
               <span class="value"><a href="https://github.com/qorjiwon" target="_blank">github.com/qorjiwon</a></span>
             </span>
           </div>
-          <p class="summary-text">A responsible full-stack developer with strong project-planning skills — I've led projects through to completion and won awards in 5 competitions.</p>
         </div>
       </div>
     </header>
+
+    <p class="summary-text">A responsible full-stack developer with strong project-planning skills — I've led projects through to completion and won awards in 5 competitions.</p>
 
     <!-- Education -->
     <section class="section">
@@ -636,8 +693,8 @@
 
       <div class="project-item">
         <div class="project-header">
-          <span class="project-title">Ttobak</span>
-          <span class="project-award">🏅 2025 SW-Centric University Digital Competition — Outstanding Award (SW Category)</span>
+          <span class="project-title">DDOBAK</span>
+          <span class="project-award">2025 SW-Centric University Digital Competition — Outstanding Award (SW Category)</span>
         </div>
         <div class="project-period">May 2025 – Aug 2025</div>
         <p class="project-desc">GenAI & OCR-based contract risk clause analysis service. Selected as Kyung Hee University's representative team for the national competition</p>
@@ -656,7 +713,7 @@
       <div class="project-item">
         <div class="project-header">
           <span class="project-title">Aljjalttakkkalsen-chu</span>
-          <span class="project-award">🏅 2023 Kyung Hee University SW Festival — Grand Prize</span>
+          <span class="project-award">2023 Kyung Hee University SW Festival — Grand Prize</span>
         </div>
         <div class="project-period">Jul 2023 – Nov 2023</div>
         <p class="project-desc">Personalized algorithm problem recommendation service based on Baekjoon Online Judge data, built as a React Chrome extension</p>

@@ -15,16 +15,18 @@
     :root {
       --primary: #1a1a2e;
       --accent-bright: #2563eb;
+      --z-overlay: 200;
       --accent-soft: #3b82f6;
       --text-primary: #1e1e2e;
       --text-secondary: #4a4a6a;
       --text-muted: #6b7280;
+      --text-muted-strong: #565d6b;
       --border: #e2e8f0;
       --bg-white: #ffffff;
       --bg-section: #f8fafc;
       --bg-tag: #eff6ff;
       --tag-text: #1e40af;
-      --gold: #d97706;
+      --gold: #b45309;
       --nav-h: 64px;
     }
 
@@ -36,6 +38,27 @@
 
     html {
       scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+
+      .project-screenshot:hover img,
+      .project-architecture:hover,
+      .project-architecture:hover img {
+        transform: none !important;
+      }
     }
 
     body {
@@ -58,10 +81,16 @@
       left: 0;
       right: 0;
       height: var(--nav-h);
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.97);
       border-bottom: 1px solid var(--border);
       z-index: 100;
+    }
+
+    @supports (backdrop-filter: blur(12px)) {
+      .nav {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+      }
     }
 
     .nav-inner {
@@ -155,20 +184,21 @@
     }
 
     section {
-      padding: 72px 0;
+      padding: var(--section-y, 72px) 0;
+    }
+
+    /* Dense reference sections breathe a little tighter; showcase sections get air. */
+    #skills,
+    #awards {
+      --section-y: 56px;
+    }
+
+    #projects {
+      --section-y: 80px;
     }
 
     section:nth-child(even) {
       background: var(--bg-section);
-    }
-
-    .section-label {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent-bright);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
     }
 
     .section-heading {
@@ -177,6 +207,7 @@
       color: var(--primary);
       letter-spacing: -0.5px;
       margin-bottom: 32px;
+      text-wrap: balance;
     }
 
     /* ── Hero ── */
@@ -220,6 +251,7 @@
       letter-spacing: -0.8px;
       line-height: 1.1;
       margin-bottom: 12px;
+      text-wrap: balance;
     }
 
     .hero-role {
@@ -240,6 +272,7 @@
       line-height: 1.75;
       max-width: 600px;
       margin-bottom: 18px;
+      text-wrap: pretty;
     }
 
     .hero-contact-row {
@@ -291,36 +324,30 @@
     .hero-meta-date {
       margin-left: 6px;
       font-size: 12.5px;
-      color: var(--text-muted);
+      color: var(--text-secondary);
     }
 
     /* ── Skills ── */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      grid-template-columns: 1fr;
+      border-top: 1px solid var(--border);
     }
 
     .skill-group {
-      background: var(--bg-section);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent-bright);
-      border-radius: 8px;
-      padding: 20px 22px;
-      transition: box-shadow 0.2s ease;
-    }
-
-    .skill-group:hover {
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px 24px;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     .skill-group-title {
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--accent-bright);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 14px;
+      letter-spacing: 0.01em;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -344,11 +371,18 @@
     .skills-grid .tech-tag {
       font-size: 13px;
       padding: 5px 12px;
-      background: var(--bg-white);
+      background: var(--bg-section);
       color: var(--tag-text);
       border: 1px solid rgba(37, 99, 235, 0.15);
       border-radius: 6px;
       font-weight: 500;
+    }
+
+    @media (max-width: 520px) {
+      .skill-group {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
     }
 
     .tech-tag {
@@ -390,6 +424,7 @@
       font-size: 17px;
       font-weight: 700;
       color: var(--primary);
+      text-wrap: balance;
     }
 
     .exp-card-role {
@@ -416,6 +451,7 @@
       color: var(--text-secondary);
       padding: 3px 0 3px 16px;
       position: relative;
+      text-wrap: pretty;
     }
 
     .exp-card li::before {
@@ -432,7 +468,6 @@
       border-radius: 12px;
       padding: 28px 32px;
       margin-bottom: 24px;
-      border-left: 4px solid var(--accent-bright);
       transition: box-shadow 0.2s;
     }
 
@@ -457,6 +492,8 @@
       font-size: 22px;
       font-weight: 800;
       color: var(--primary);
+      flex: 1 1 100%;
+      text-wrap: balance;
     }
 
     .project-award-badge {
@@ -467,7 +504,6 @@
       border: 1px solid #fde68a;
       border-radius: 20px;
       padding: 4px 12px;
-      white-space: nowrap;
     }
 
     .project-card-period {
@@ -481,6 +517,7 @@
       color: var(--text-secondary);
       font-weight: 500;
       margin-bottom: 14px;
+      text-wrap: pretty;
     }
 
     .project-card ul {
@@ -494,6 +531,7 @@
       color: var(--text-secondary);
       padding: 4px 0 4px 16px;
       position: relative;
+      text-wrap: pretty;
     }
 
     .project-card li::before {
@@ -501,6 +539,254 @@
       position: absolute;
       left: 0;
       color: var(--accent-soft);
+    }
+
+    .project-screenshots {
+      margin: 18px 0 16px;
+    }
+
+    .project-screenshots-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .project-screenshots-title::before {
+      content: "";
+      width: 3px;
+      height: 13px;
+      border-radius: 2px;
+      background: var(--accent-soft);
+    }
+
+    .project-media {
+      margin: 18px 0 16px;
+    }
+
+    .project-media-tabs {
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      margin-bottom: 14px;
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .media-tab {
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      border-radius: 7px;
+      padding: 7px 15px;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .media-tab:hover {
+      color: var(--accent-bright);
+    }
+
+    .media-tab.is-active {
+      background: #ffffff;
+      color: var(--accent-bright);
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+    }
+
+    .project-media-panel {
+      display: none;
+    }
+
+    .project-media-panel.is-active {
+      display: block;
+    }
+
+    .project-screenshot-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 18px 16px;
+      padding: 8px 2px 4px;
+    }
+
+    .project-screenshot {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 auto;
+      cursor: pointer;
+    }
+
+    .project-screenshot img {
+      display: block;
+      width: 134px;
+      height: 270px;
+      object-fit: cover;
+      object-position: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 10px 24px -12px rgba(15, 23, 42, 0.28);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .project-screenshot:hover img {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 40px -16px rgba(37, 99, 235, 0.5);
+    }
+
+    .project-screenshot figcaption {
+      margin-top: 11px;
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* hover zoom badge — replaces the "click to enlarge" text */
+    .project-screenshot::after,
+    .project-architecture::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(15, 23, 42, 0.6);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px 16px;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .project-screenshot:hover::after,
+    .project-architecture:hover::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .project-architecture {
+      position: relative;
+      max-width: 660px;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--bg-section);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .project-architecture:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-soft);
+      box-shadow: 0 14px 26px -12px rgba(37, 99, 235, 0.4);
+    }
+
+    .project-architecture img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .project-architecture:hover img {
+      transform: scale(1.03);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: var(--z-overlay);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(4px);
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: min(960px, 100%);
+      max-height: calc(100vh - 48px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lightbox-frame {
+      width: min(400px, 85vw, calc((100vh - 130px) * 9 / 16));
+      aspect-ratio: 9 / 16;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f172a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .lightbox-frame--wide {
+      width: min(900px, 94vw, calc((100vh - 130px) * 16 / 9));
+      aspect-ratio: 16 / 9;
+    }
+
+    .lightbox-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+
+    .lightbox-caption {
+      font-size: 13px;
+      color: #e2e8f0;
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 50%;
+      background: white;
+      color: var(--text-primary);
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 640px) {
+      .project-screenshot img {
+        width: 119px;
+        height: 240px;
+      }
     }
 
     /* ── Awards ── */
@@ -550,6 +836,11 @@
       color: var(--text-muted);
       line-height: 1.4;
       word-break: keep-all;
+    }
+
+    .awards-rank .medal {
+      font-size: 1.4em;
+      vertical-align: -0.08em;
     }
 
     .awards-name {
@@ -710,6 +1001,7 @@
       padding: 4px 0 4px 16px;
       position: relative;
       line-height: 1.65;
+      text-wrap: pretty;
     }
 
     .timeline-list li::before {
@@ -856,7 +1148,7 @@
     /* ── Footer ── */
     footer {
       background: var(--primary);
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.82);
       text-align: center;
       padding: 32px 24px;
       font-size: 13px;
@@ -903,12 +1195,49 @@
         grid-template-columns: 1fr;
       }
 
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
       .project-card-header {
         flex-direction: column;
+      }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .nav,
+      .lightbox,
+      footer {
+        display: none;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      .hero {
+        background: #fff;
+        padding-top: 0;
+      }
+
+      section {
+        --section-y: 24px;
+        break-inside: avoid;
+      }
+
+      section:nth-child(even) {
+        background: #fff;
+      }
+
+      .exp-card,
+      .project-card,
+      .info-card,
+      .timeline-body,
+      .skill-group,
+      .hero-photo {
+        box-shadow: none;
+      }
+
+      a {
+        color: #000;
       }
     }
   </style>
@@ -951,13 +1280,15 @@
     </div>
   </nav>
 
+  <main>
+
   <!-- Hero -->
-  <section class="hero" id="about">
+  <section class="hero" id="about" aria-labelledby="hero-name">
     <div class="container">
       <header class="hero-header">
         <img src="profile_photo.jpg" alt="Jiwon Baek profile photo" class="hero-photo">
         <div class="hero-intro">
-          <h1 class="hero-name">Jiwon Baek</h1>
+          <h1 class="hero-name" id="hero-name">Jiwon Baek</h1>
           <span class="hero-role">Full-Stack Developer</span>
           <p class="hero-summary">
             With 8 SW competition awards and startup frontend intern experience,
@@ -988,10 +1319,9 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills">
+  <section id="skills" aria-labelledby="skills-heading">
     <div class="container">
-      <p class="section-label">Skills</p>
-      <h2 class="section-heading">Tech Stack</h2>
+      <h2 class="section-heading" id="skills-heading">Tech Stack</h2>
       <div class="skills-grid">
         <div class="skill-group">
           <div class="skill-group-title">Language</div>
@@ -1034,10 +1364,9 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience">
+  <section id="experience" aria-labelledby="experience-heading">
     <div class="container">
-      <p class="section-label">Experience</p>
-      <h2 class="section-heading">Work Experience</h2>
+      <h2 class="section-heading" id="experience-heading">Work Experience</h2>
 
       <div class="exp-card">
         <div class="exp-card-header">
@@ -1084,18 +1413,52 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects">
+  <section id="projects" aria-labelledby="projects-heading">
     <div class="container">
-      <p class="section-label">Projects</p>
-      <h2 class="section-heading">Award-Winning Projects</h2>
+      <h2 class="section-heading" id="projects-heading">Award-Winning Projects</h2>
 
       <div class="project-card">
         <div class="project-card-header">
-          <span class="project-card-title">Ttobak</span>
-          <span class="project-award-badge">🏅 2025 SW-Centric University Digital Competition — Outstanding Award (SW)</span>
+          <span class="project-card-title">DDOBAK</span>
+          <span class="project-award-badge">🥈 2025 SW-Centric University Digital Competition — Outstanding Award (SW)</span>
         </div>
         <div class="project-card-period">May 2025 – Aug 2025</div>
         <p class="project-card-desc">GenAI & OCR-based contract risk clause analysis service. Selected as Kyung Hee University's representative team for the national competition</p>
+        <div class="project-media">
+          <div class="project-media-tabs" role="tablist">
+            <button type="button" class="media-tab is-active" data-tab="screens">Service screens</button>
+            <button type="button" class="media-tab" data-tab="arch">Service architecture</button>
+          </div>
+          <div class="project-media-panel is-active" data-panel="screens">
+            <div class="project-screenshot-grid">
+              <figure class="project-screenshot" data-lightbox data-caption="Contract upload">
+                <img src="images/ddobak/upload.png" alt="DDOBAK contract upload screen" loading="lazy">
+                <figcaption>Contract upload</figcaption>
+              </figure>
+              <figure class="project-screenshot" data-lightbox data-caption="OCR text review">
+                <img src="images/ddobak/preview.png" alt="DDOBAK OCR text review screen" loading="lazy">
+                <figcaption>OCR text review</figcaption>
+              </figure>
+              <figure class="project-screenshot" data-lightbox data-caption="Risk clause analysis">
+                <img src="images/ddobak/analyze.png" alt="DDOBAK risk clause analysis screen" loading="lazy">
+                <figcaption>Risk clause analysis</figcaption>
+              </figure>
+              <figure class="project-screenshot" data-lightbox data-caption="Analysis summary">
+                <img src="images/ddobak/summary.png" alt="DDOBAK analysis summary screen" loading="lazy">
+                <figcaption>Analysis summary</figcaption>
+              </figure>
+              <figure class="project-screenshot" data-lightbox data-caption="Clause detail analysis">
+                <img src="images/ddobak/detail.png" alt="DDOBAK clause detail analysis screen" loading="lazy">
+                <figcaption>Clause detail analysis</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="project-media-panel" data-panel="arch">
+            <figure class="project-architecture" data-lightbox data-caption="DDOBAK AWS-based service architecture">
+              <img src="images/ddobak/architecture.png" alt="DDOBAK AWS-based service architecture diagram" loading="lazy">
+            </figure>
+          </div>
+        </div>
         <div class="skill-tags">
           <span class="tech-tag">Next.js</span>
           <span class="tech-tag">Spring Boot</span>
@@ -1106,15 +1469,15 @@
         <ul>
           <li>Designed an OCR and analysis pipeline triggered on contract upload</li>
           <li>Built a Bedrock-based RAG pipeline: S3 storage → Titan embeddings → OpenSearch vector search → Claude 3.5 Sonnet analysis</li>
-          <li>Developed the Next.js web interface and iOS WebView integration; deployed a QA test page to improve team collaboration</li>
-          <li>Ttobak AI analysis scored 14/15 for accuracy via an LLM-as-a-Judge evaluation (vs. 11.25 avg. for commercial LLMs)</li>
+          <li>Developed the Next.js web interface and iOS WebView integration</li>
+          <li>DDOBAK AI analysis scored 14/15 for accuracy via an LLM-as-a-Judge evaluation (vs. 11.25 avg. for commercial LLMs)</li>
         </ul>
       </div>
 
       <div class="project-card">
         <div class="project-card-header">
           <span class="project-card-title">Aljjalttakkkalsen-chu</span>
-          <span class="project-award-badge">🏅 2023 Kyung Hee University SW Festival — Grand Prize</span>
+          <span class="project-award-badge">🥇 2023 Kyung Hee University SW Festival — Grand Prize</span>
         </div>
         <div class="project-card-period">Jul 2023 – Nov 2023</div>
         <p class="project-card-desc">Personalized algorithm problem recommendation service based on Baekjoon Online Judge data, built as a React Chrome extension</p>
@@ -1137,28 +1500,27 @@
   </section>
 
   <!-- Awards -->
-  <section id="awards">
+  <section id="awards" aria-labelledby="awards-heading">
     <div class="container">
-      <p class="section-label">Awards</p>
-      <h2 class="section-heading">Awards</h2>
+      <h2 class="section-heading" id="awards-heading">Awards</h2>
       <div class="awards-board">
         <div class="awards-year-group">
           <div class="awards-year">2025</div>
           <div class="awards-rows">
             <div class="awards-row awards-row--2">
-              <span class="awards-rank">Outstanding</span>
+              <span class="awards-rank"><span class="medal">🥈</span> Outstanding</span>
               <span class="awards-name">SW-Centric University Digital Competition (SW Category)</span>
             </div>
             <div class="awards-row awards-row--2">
-              <span class="awards-rank">2nd</span>
+              <span class="awards-rank"><span class="medal">🥈</span> 2nd</span>
               <span class="awards-name">SK AI Summit — University Booth</span>
             </div>
             <div class="awards-row awards-row--2">
-              <span class="awards-rank">2nd</span>
+              <span class="awards-rank"><span class="medal">🥈</span> 2nd</span>
               <span class="awards-name">SK AI Summit — AI Scholarship Quiz</span>
             </div>
             <div class="awards-row">
-              <span class="awards-rank">Excellence</span>
+              <span class="awards-rank"><span class="medal">🥉</span> Excellence</span>
               <span class="awards-name">Kyung Hee Univ. Khuthon</span>
             </div>
           </div>
@@ -1167,7 +1529,7 @@
           <div class="awards-year">2024</div>
           <div class="awards-rows">
             <div class="awards-row awards-row--1">
-              <span class="awards-rank">1st</span>
+              <span class="awards-rank"><span class="medal">🥇</span> 1st</span>
               <span class="awards-name">Kyung Hee Univ. KVS Cohort 10 — Promising Team</span>
             </div>
           </div>
@@ -1176,11 +1538,11 @@
           <div class="awards-year">2023</div>
           <div class="awards-rows">
             <div class="awards-row awards-row--1">
-              <span class="awards-rank">Grand Prize · Popularity</span>
+              <span class="awards-rank"><span class="medal">🥇</span>&nbsp;Grand Prize · <span class="medal">💖</span>&nbsp;Popularity</span>
               <span class="awards-name">Kyung Hee Univ. SW Festival</span>
             </div>
             <div class="awards-row awards-row--2">
-              <span class="awards-rank">Outstanding</span>
+              <span class="awards-rank"><span class="medal">🥈</span> Outstanding</span>
               <span class="awards-name">Kyung Hee Univ. Khuthon</span>
             </div>
           </div>
@@ -1190,10 +1552,9 @@
   </section>
 
   <!-- Activities -->
-  <section id="activities">
+  <section id="activities" aria-labelledby="activities-heading">
     <div class="container">
-      <p class="section-label">Activities</p>
-      <h2 class="section-heading">Extracurricular Activities</h2>
+      <h2 class="section-heading" id="activities-heading">Extracurricular Activities</h2>
 
       <div class="timeline">
         <div class="timeline-item">
@@ -1264,9 +1625,21 @@
     </div>
   </section>
 
+  </main>
+
   <footer>
     <p>© 2026 Jiwon Baek · <a href="https://github.com/qorjiwon" target="_blank">GitHub</a> · <a href="resume-en.html" target="_blank">Resume</a></p>
   </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarge image">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+      <div class="lightbox-frame" id="lightbox-frame">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+      </div>
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
 
   <script>
     document.querySelectorAll('.lang-btn:not(.active)').forEach((link) => {
@@ -1305,6 +1678,55 @@
       }
     });
     }
+
+    document.querySelectorAll('.project-media').forEach((media) => {
+      const tabs = media.querySelectorAll('.media-tab');
+      const panels = media.querySelectorAll('.project-media-panel');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const name = tab.dataset.tab;
+          tabs.forEach((t) => t.classList.toggle('is-active', t === tab));
+          panels.forEach((p) => p.classList.toggle('is-active', p.dataset.panel === name));
+        });
+      });
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxFrame = document.getElementById('lightbox-frame');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    const openLightbox = (src, caption, alt, isWide) => {
+      lightboxFrame.className = isWide ? 'lightbox-frame lightbox-frame--wide' : 'lightbox-frame';
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightboxCaption.textContent = caption;
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    };
+
+    document.querySelectorAll('[data-lightbox]').forEach((item) => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const isWide = item.classList.contains('project-architecture');
+        openLightbox(img.src, item.dataset.caption || img.alt, img.alt, isWide);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
   </script>
 
 </body>
