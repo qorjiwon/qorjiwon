@@ -835,12 +835,252 @@
       }
     }
 
+    /* ── Award detail modal ── */
+    .awards-row--detail {
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .awards-row--detail:hover {
+      background: var(--bg-section);
+    }
+
+    .awards-row--detail:focus-visible {
+      background: var(--bg-section);
+      outline: 2px solid var(--accent-soft);
+      outline-offset: -2px;
+      border-radius: 4px;
+    }
+
+    .award-modal {
+      position: fixed;
+      inset: 0;
+      z-index: calc(var(--z-overlay) - 1);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
+    }
+
+    .award-modal.is-open {
+      display: flex;
+    }
+
+    .award-modal-panel {
+      position: relative;
+      width: min(720px, 100%);
+      max-height: calc(100vh - 48px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      background: var(--bg-white);
+      border-radius: 16px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      padding: 32px;
+    }
+
+    .award-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 50%;
+      background: var(--bg-section);
+      color: var(--text-secondary);
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .award-modal-close:hover {
+      background: var(--border);
+      color: var(--text-primary);
+    }
+
+    .award-detail-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .award-detail-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .award-detail-badge--gold {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .award-detail-badge--pink {
+      background: #fce7f3;
+      color: #be185d;
+    }
+
+    .award-detail-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin: 0 0 4px;
+      padding-right: 36px;
+    }
+
+    .award-detail-meta {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin: 0 0 18px;
+    }
+
+    .award-detail-body {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .award-detail-main {
+      flex: 1 1 300px;
+      min-width: 0;
+    }
+
+    .award-detail-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin: 0 0 16px;
+      text-wrap: pretty;
+    }
+
+    .award-detail-sessions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .award-detail-session {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--tag-text);
+      background: var(--bg-tag);
+      padding: 4px 9px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .award-detail-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .award-detail-points li {
+      position: relative;
+      padding-left: 16px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      text-wrap: pretty;
+    }
+
+    .award-detail-points li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 8px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+    }
+
+    .award-detail-points strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .award-detail-poster {
+      flex: 0 0 auto;
+      width: 190px;
+      max-width: 40%;
+      margin: 0;
+    }
+
+    .award-detail-poster img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      cursor: zoom-in;
+    }
+
+    .award-detail-links {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .award-detail-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-bright);
+      text-decoration: none;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .award-detail-link:hover {
+      background: var(--bg-tag);
+      border-color: var(--accent-soft);
+    }
+
+    @media (max-width: 560px) {
+      .award-modal-panel {
+        padding: 24px 20px;
+      }
+
+      .award-detail-body {
+        flex-direction: column;
+      }
+
+      .award-detail-poster {
+        width: 170px;
+        max-width: 60%;
+        margin: 0 auto;
+      }
+    }
+
     /* ── Awards ── */
     .awards-board {
       display: flex;
       flex-direction: column;
       gap: 36px;
-      max-width: 680px;
     }
 
     .awards-year-group {
@@ -865,7 +1105,7 @@
 
     .awards-row {
       display: grid;
-      grid-template-columns: 88px 1fr;
+      grid-template-columns: 91px 1fr;
       gap: 20px;
       align-items: baseline;
       padding: 13px 0;
@@ -1586,7 +1826,7 @@
         <div class="awards-year-group">
           <div class="awards-year">2023</div>
           <div class="awards-rows">
-            <div class="awards-row awards-row--1">
+            <div class="awards-row awards-row--1 awards-row--detail" data-award="award-sw-festival-2023" role="button" tabindex="0" aria-haspopup="dialog">
               <span class="awards-rank"><span class="medal">🥇</span>&nbsp;Grand Prize · <span class="medal">💖</span>&nbsp;Popularity</span>
               <span class="awards-name">Kyung Hee Univ. SW Festival</span>
             </div>
@@ -1690,6 +1930,45 @@
     </div>
   </div>
 
+  <!-- Award detail modal -->
+  <div class="award-modal" id="award-modal" role="dialog" aria-modal="true" aria-label="Award details">
+    <div class="award-modal-panel">
+      <button type="button" class="award-modal-close" data-award-close aria-label="Close">×</button>
+      <div class="award-modal-content" id="award-modal-content"></div>
+    </div>
+  </div>
+
+  <template id="award-sw-festival-2023">
+    <div class="award-detail-badges">
+      <span class="award-detail-badge award-detail-badge--gold">🥇 Grand Prize</span>
+      <span class="award-detail-badge award-detail-badge--pink">💖 Popularity</span>
+    </div>
+    <h3 class="award-detail-title">2023 Kyung Hee University SW Festival</h3>
+    <p class="award-detail-meta">Hosted by KHU SW-Centric University Project Group &amp; College of Software Convergence</p>
+    <div class="award-detail-body">
+      <div class="award-detail-main">
+        <p class="award-detail-desc">The university's flagship software competition, where students exhibit and compete with SW projects built in coursework, extracurriculars, clubs, and personal work across four sessions.</p>
+        <div class="award-detail-sessions">
+          <span class="award-detail-session">Big Data · AI</span>
+          <span class="award-detail-session">Games · Immersive Media</span>
+          <span class="award-detail-session">Web · Mobile</span>
+          <span class="award-detail-session">Physical Computing</span>
+        </div>
+        <ul class="award-detail-points">
+          <li>The <strong>Grand Prize</strong> goes to a single team chosen from the four session winners, effectively 1st place across all categories.</li>
+          <li>The <strong>Popularity Award</strong> is decided by visitor &lsquo;likes,&rsquo; not by the judging panel.</li>
+          <li>Won the jury award (Grand Prize) and the audience award (Popularity) at the same time.</li>
+        </ul>
+      </div>
+      <figure class="award-detail-poster">
+        <img src="images/awards/sw-festival-2023.png" alt="2023 Kyung Hee University SW Festival poster" loading="lazy">
+      </figure>
+    </div>
+    <div class="award-detail-links">
+      <a class="award-detail-link" href="https://swedu.khu.ac.kr/bbs/board.php?bo_table=07_01&amp;wr_id=2243" target="_blank" rel="noopener noreferrer">View announcement ↗</a>
+    </div>
+  </template>
+
   <script>
     document.querySelectorAll('.lang-btn:not(.active)').forEach((link) => {
       link.addEventListener('click', () => {
@@ -1758,7 +2037,10 @@
     const closeLightbox = () => {
       lightbox.classList.remove('is-open');
       lightboxImg.src = '';
-      document.body.style.overflow = '';
+      const awardModalEl = document.getElementById('award-modal');
+      if (!awardModalEl || !awardModalEl.classList.contains('is-open')) {
+        document.body.style.overflow = '';
+      }
     };
 
     document.querySelectorAll('[data-lightbox]').forEach((item) => {
@@ -1773,8 +2055,59 @@
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) closeLightbox();
     });
+
+    // Award detail modal
+    const awardModal = document.getElementById('award-modal');
+    const awardModalContent = document.getElementById('award-modal-content');
+    let awardLastFocus = null;
+
+    const openAwardModal = (id) => {
+      const tpl = document.getElementById(id);
+      if (!awardModal || !tpl) return;
+      awardModalContent.innerHTML = '';
+      awardModalContent.appendChild(tpl.content.cloneNode(true));
+      const poster = awardModalContent.querySelector('.award-detail-poster img');
+      if (poster) {
+        poster.addEventListener('click', () => openLightbox(poster.src, poster.alt, poster.alt, false));
+      }
+      awardLastFocus = document.activeElement;
+      awardModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      const closeBtn = awardModal.querySelector('.award-modal-close');
+      if (closeBtn) closeBtn.focus();
+    };
+
+    const closeAwardModal = () => {
+      if (!awardModal) return;
+      awardModal.classList.remove('is-open');
+      awardModalContent.innerHTML = '';
+      document.body.style.overflow = '';
+      if (awardLastFocus && typeof awardLastFocus.focus === 'function') awardLastFocus.focus();
+    };
+
+    document.querySelectorAll('[data-award]').forEach((row) => {
+      row.addEventListener('click', () => openAwardModal(row.dataset.award));
+      row.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openAwardModal(row.dataset.award);
+        }
+      });
+    });
+
+    if (awardModal) {
+      awardModal.addEventListener('click', (e) => {
+        if (e.target === awardModal || e.target.hasAttribute('data-award-close')) closeAwardModal();
+      });
+    }
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+      if (e.key !== 'Escape') return;
+      if (lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      } else if (awardModal && awardModal.classList.contains('is-open')) {
+        closeAwardModal();
+      }
     });
   </script>
 
