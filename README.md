@@ -4,8 +4,6 @@ Hi, I'm Jiwon👋
 If you’d like to know more about me and my work,  
 check out my **[Portfolio →](https://qorjiwon.github.io/qorjiwon/)** 🚀
 
-Wishing you a wonderful day🥂
-
 - - -
 
 ## 🏆 Awards
