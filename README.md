@@ -2,7 +2,7 @@
 Hi, I'm Jiwon👋
 
 If you’d like to know more about me and my work,  
-my **Portfolio** is moving to a new home — link coming soon 🚀
+check out my **[Portfolio →](https://qorjiwon.vercel.app/)** 🚀
 
 - - -
 
